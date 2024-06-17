@@ -1,0 +1,244 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 10px 20px; /* Added horizontal padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.main-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.slider {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slider .slides {
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slider .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slider .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content .description, .content .news {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.content .description h2 {
+    color: #1a1a1a;
+}
+
+.content .description p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.content .news h3 {
+    color: #1a1a1a;
+}
+
+.content .news ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content .news ul li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 4px solid #ff5722;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content .news ul li:hover {
+    background-color: #ffefd5;
+}
+
+.content .news button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.content .news button:hover {
+    background-color: #e64a19;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-top: 20px;
+    border-top: 4px solid #ff5722;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .contact-info, footer .address {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+
+    .content .description, .content .news {
+        width: 100%;
+    }
+
+    footer .contact-info, footer .address {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        width: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .slider .caption {
+        font-size: 18px;
+    }
+
+    .content .description, .content .news {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        width: 200px;
+        padding: 10px 0; /* Added vertical padding */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .slider .caption {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content .description, .content .news {
+        padding: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .contact-info, footer .address {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 2px 0;
+    }
+}

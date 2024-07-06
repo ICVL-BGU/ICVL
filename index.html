@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICVL Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/members.css">
+
 </head>
 <body>
     <header>
-         <div class="logo">
+        <div class="logo">
             <a href="#" onclick="loadContent('pages/home.html')">
                 <img src="assets/logo_icvl.png" alt="ICVL Logo">
             </a>
         </div>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-list">
                 <li><a href="#" onclick="loadContent('pages/about.html')">About</a></li>
                 <li><a href="#" onclick="loadContent('pages/members.html')">Members</a></li>
                 <li><a href="#" onclick="loadContent('pages/research.html')">Research</a></li>

@@ -35,3 +35,52 @@ function checkInitialState() {
 }
 
 checkInitialState();
+
+function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('active');
+}
+let slideIndex = 1;
+let slideInterval;
+
+showSlides(slideIndex);
+startAutoSlide();
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    resetAutoSlide();
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    resetAutoSlide();
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+
+    // Fade out all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+        slides[i].style.display = "none";
+    }
+
+    // Fade in the target slide
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(() => {
+        slides[slideIndex-1].style.opacity = 1;
+    }, 10);
+}
+
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 5000); // Change slide every 5 seconds
+}
+
+function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+}

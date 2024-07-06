@@ -1,0 +1,101 @@
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+        margin-left: 20px; /* Add some space between logo and menu icon */
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header.fixed {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .about-text {
+        margin-bottom: 20px;
+    }
+
+    .slider .slides {
+        flex-direction: column;
+    }
+
+    .slider .slide {
+        margin-bottom: 20px;
+    }
+
+        .slider {
+        padding-top: 75%; /* 4:3 Aspect Ratio for smaller screens */
+    }
+
+    .caption {
+        font-size: 16px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+
+    .about-text {
+        margin-bottom: 20px;
+    }
+
+    header .logo img {
+        width: 150px;
+    }
+
+    .slider .slides {
+        flex-direction: column;
+    }
+
+    .slider .slide {
+        margin-bottom: 20px;
+    }
+        .slider {
+        padding-top: 100%; /* 1:1 Aspect Ratio for very small screens */
+    }
+
+    .caption {
+        font-size: 14px;
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+    }
+}

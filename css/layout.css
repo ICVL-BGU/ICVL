@@ -1,0 +1,205 @@
+/* Header */
+header {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.1s ease-out; /* Reduce transition duration */
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    padding: 5px 20px;
+}
+
+header .logo img {
+    width: 200px;
+    transition: width 0.1s ease-out; /* Reduce transition duration */
+}
+
+header.fixed .logo img {
+    width: 50px; /* Adjust the size as needed */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.1s, color 0.1s; /* Reduce transition duration */
+}
+
+nav ul li a:hover {
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Move the icon to the right end */
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Main Container */
+.main-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-top: 20px;
+    border-top: 4px solid #ff5722;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .contact-info, footer .address {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Content Sections */
+.content {
+    display: block; /* Changed from flex to block */
+    padding: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #416488;
+}
+
+
+/* members.css */
+#primary {
+    padding: 20px;
+}
+
+.page-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.member_container {
+    margin-bottom: 40px;
+}
+
+.member_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.student_box, .student_box_alumni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.student_box_img img, .student_box_alumni img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.student_box p, .student_box_alumni p {
+    margin: 5px 0;
+}
+
+.student_box p b, .student_box_alumni p b {
+    color: #555;
+}
+
+/* Additional styles to match theme */
+.page-title {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.member_container h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-top: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,270 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.1s ease-out; /* Reduce transition duration */
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    padding: 5px 20px;
+}
+
+header.fixed .logo img {
+    width: 50px; /* Adjust the size as needed */
+}
+
+header .logo img {
+    width: 200px;
+    transition: width 0.1s ease-out; /* Reduce transition duration */
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.1s, color 0.1s; /* Reduce transition duration */
+}
+
+nav ul li a:hover {
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.main-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.slider {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slider .slides {
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slider .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slider .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+
+.content {
+    display: block; /* Changed from flex to block */
+    padding: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #416488;
+}
+
+.content .description h2, .content .description h3, .content .description h4, .content .description h6 {
+    color: #1a1a1a;
+    margin-top: 20px;
+}
+
+.content .description p {
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-top: 20px;
+    border-top: 4px solid #ff5722;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .contact-info, footer .address {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+
+    footer .contact-info, footer .address {
+        width: 100%;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        width: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content .description {
+        padding: 10px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        width: 100px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .slider .caption {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content .description {
+        padding: 5px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .contact-info, footer .address {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 2px 0;
+    }
+}
+
+/* Additional styles for image container */
+.slider .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}

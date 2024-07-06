@@ -9,7 +9,7 @@ function loadContent(page) {
 
 // Load default content (About page) when the page first loads
 window.onload = function() {
-    loadContent('pages/about.html');
+    loadContent('pages/home.html');
 };
 
 function adjustPadding() {

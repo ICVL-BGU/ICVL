@@ -43,7 +43,7 @@ function toggleMenu() {
 let slideIndex = 1;
 let slideInterval;
 
-showSlides(slideIndex);
+// showSlides(slideIndex);
 startAutoSlide();
 
 function plusSlides(n) {
@@ -57,6 +57,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+         if (document.querySelector(".slider")) {
+
     let slides = document.getElementsByClassName("slide");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
@@ -68,10 +70,11 @@ function showSlides(n) {
     }
 
     // Fade in the target slide
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(() => {
-        slides[slideIndex-1].style.opacity = 1;
-    }, 10);
+         slides[slideIndex - 1].style.display = "block";
+         setTimeout(() => {
+             slides[slideIndex - 1].style.opacity = 1;
+         }, 10);
+     }
 }
 
 function startAutoSlide() {
@@ -84,3 +87,54 @@ function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
+
+
+function loadContent(page) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', page, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('content').innerHTML = xhr.responseText;
+
+            // Check if the page being loaded is the publications page
+            if (page === 'pages/publications.html') {
+                fetchPublications();
+            }
+        }
+    };
+    xhr.send();
+}
+
+ function fetchPublications() {
+            console.log('Starting fetch request');
+            fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html"))
+                .then(response => {
+                    if (response.ok) return response.json();
+                    throw new Error("Network response was not ok.");
+                })
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data.contents, "text/html");
+                    const sections = doc.querySelectorAll(".sub_title_page");
+                    let htmlContent = "";
+
+                    sections.forEach(section => {
+                        const year = section.textContent.trim();
+                        const publications = section.nextElementSibling.nextElementSibling.querySelectorAll("li");
+                        let pubList = "";
+
+                        publications.forEach(pub => {
+                            pubList += `<li>${pub.innerHTML}</li>`;
+                        });
+
+                        htmlContent += `
+                            <div class="publication-year">
+                                <h2>${year}</h2>
+                                <ul class="public">${pubList}</ul>
+                            </div>`;
+                    });
+
+                    document.getElementById("publications").innerHTML = htmlContent;
+                })
+                .catch(error => console.error("Error fetching publications:", error));
+        }

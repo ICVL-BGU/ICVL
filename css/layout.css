@@ -203,3 +203,53 @@ footer p {
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
 }
+
+.publication-year {
+    margin-bottom: 2rem;
+}
+.publication-year h2 {
+    font-size: 1.5rem;
+    color: #ff6600;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+ul.public {
+    list-style-type: none;
+    padding: 0;
+}
+ul.public li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+ul.public li a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.research-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.research-item {
+    background: #faf7f7;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    transition: transform 0.2s;
+}
+.research-item:hover {
+    transform: scale(1.05);
+}
+.research-item img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+.research-item p {
+    margin: 10px 0 0;
+    font-size: 1.1em;
+}

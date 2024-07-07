@@ -1,12 +1,3 @@
-function loadContent(page) {
-    fetch(page)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading content:', error));
-}
-
 // Load default content (About page) when the page first loads
 window.onload = function() {
     loadContent('pages/home.html');
@@ -87,38 +78,64 @@ function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
+function loadContent(page) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', page, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('content').innerHTML = xhr.responseText;
 
-
- function fetchPublications() {
-            console.log('Starting fetch request');
-            fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html"))
-                .then(response => {
-                    if (response.ok) return response.json();
-                    throw new Error("Network response was not ok.");
-                })
-                .then(data => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data.contents, "text/html");
-                    const sections = doc.querySelectorAll(".sub_title_page");
-                    let htmlContent = "";
-
-                    sections.forEach(section => {
-                        const year = section.textContent.trim();
-                        const publications = section.nextElementSibling.nextElementSibling.querySelectorAll("li");
-                        let pubList = "";
-
-                        publications.forEach(pub => {
-                            pubList += `<li>${pub.innerHTML}</li>`;
-                        });
-
-                        htmlContent += `
-                            <div class="publication-year">
-                                <h2>${year}</h2>
-                                <ul class="public">${pubList}</ul>
-                            </div>`;
-                    });
-
-                    document.getElementById("publications").innerHTML = htmlContent;
-                })
-                .catch(error => console.error("Error fetching publications:", error));
+            // Check if the page being loaded is the publications page
+            if (page === 'pages/publications.html') {
+                fetchPublications();
+            }
         }
+    };
+    xhr.send();
+}
+
+// Fetch publications function
+
+  function fetchPublications() {
+    console.log('Starting fetch request');
+    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html"))
+        .then(response => {
+            if (response.ok) return response.json();
+            throw new Error("Network response was not ok.");
+        })
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data.contents, "text/html");
+            const sections = doc.querySelectorAll(".sub_title_page");
+            let htmlContent = "";
+
+            sections.forEach(section => {
+                const year = section.textContent.trim();
+                const publications = section.nextElementSibling.nextElementSibling.querySelectorAll("li");
+                let pubList = "";
+
+                publications.forEach(pub => {
+                    pubList += `<li>${pub.innerHTML}</li>`;
+                });
+
+                htmlContent += `
+                    <div class="publication-year">
+                        <h2>${year}</h2>
+                        <ul class="public">${pubList}</ul>
+                    </div>`;
+            });
+
+            document.getElementById("publications").innerHTML = htmlContent;
+        })
+        .catch(error => console.error("Error fetching publications:", error));
+}
+
+// Display publications function
+function displayPublications() {
+    if (document.getElementById("loading-indicator")) {
+        document.getElementById("loading-indicator").style.display = "none";
+    }
+    if (document.getElementById("publications")) {
+        document.getElementById("publications").innerHTML = publicationsData;
+    }
+}

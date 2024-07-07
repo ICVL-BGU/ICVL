@@ -135,13 +135,3 @@ function fetchPublications() {
         })
         .catch(error => console.error("Error fetching publications:", error));
 }
-
-
-window.addEventListener('DOMContentLoaded', (event) => {
-
-    if (window.location.hostname === 'localhost') {
-        document.querySelector('base').setAttribute('href', '');
-    } else {
-        document.querySelector('base').setAttribute('href', '/ICVL/');
-    }
-});

@@ -1,5 +1,5 @@
 // Load default content (About page) when the page first loads
-window.onload = function() {
+window.onload = function () {
     loadContent('pages/home.html');
 };
 
@@ -31,6 +31,7 @@ function toggleMenu() {
     const navList = document.getElementById('nav-list');
     navList.classList.toggle('active');
 }
+
 let slideIndex = 1;
 let slideInterval;
 
@@ -48,24 +49,28 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-         if (document.querySelector(".slider")) {
+    if (document.querySelector(".slider")) {
 
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
 
-    // Fade out all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = 0;
-        slides[i].style.display = "none";
+        // Fade out all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.opacity = 0;
+            slides[i].style.display = "none";
+        }
+
+        // Fade in the target slide
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(() => {
+            slides[slideIndex - 1].style.opacity = 1;
+        }, 10);
     }
-
-    // Fade in the target slide
-         slides[slideIndex - 1].style.display = "block";
-         setTimeout(() => {
-             slides[slideIndex - 1].style.opacity = 1;
-         }, 10);
-     }
 }
 
 function startAutoSlide() {
@@ -78,6 +83,7 @@ function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
+
 function loadContent(page) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', page, true);
@@ -96,7 +102,7 @@ function loadContent(page) {
 
 // Fetch publications function
 
-  function fetchPublications() {
+function fetchPublications() {
     console.log('Starting fetch request');
     fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html"))
         .then(response => {
@@ -130,12 +136,12 @@ function loadContent(page) {
         .catch(error => console.error("Error fetching publications:", error));
 }
 
-// Display publications function
-function displayPublications() {
-    if (document.getElementById("loading-indicator")) {
-        document.getElementById("loading-indicator").style.display = "none";
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+    if (window.location.hostname === 'localhost') {
+        document.querySelector('base').setAttribute('href', '');
+    } else {
+        document.querySelector('base').setAttribute('href', '/ICVL/');
     }
-    if (document.getElementById("publications")) {
-        document.getElementById("publications").innerHTML = publicationsData;
-    }
-}
+});

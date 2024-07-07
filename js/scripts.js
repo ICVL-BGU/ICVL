@@ -89,22 +89,6 @@ function resetAutoSlide() {
 }
 
 
-function loadContent(page) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', page, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('content').innerHTML = xhr.responseText;
-
-            // Check if the page being loaded is the publications page
-            if (page === 'pages/publications.html') {
-                fetchPublications();
-            }
-        }
-    };
-    xhr.send();
-}
-
  function fetchPublications() {
             console.log('Starting fetch request');
             fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html"))

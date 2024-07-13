@@ -95,6 +95,9 @@ function loadContent(page) {
             if (page === 'pages/publications.html') {
                 fetchPublications();
             }
+            if (page === 'pages/seminar.html') {
+                loadSeminars();
+            }
         }
     };
     xhr.send();

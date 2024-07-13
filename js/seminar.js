@@ -1,6 +1,6 @@
 
 function loadSeminars() {
-    fetch('../assets/seminar/seminar_data.xlsx')
+    fetch('./assets/seminar/seminar_data.xlsx')
         .then(response => response.arrayBuffer())
         .then(data => {
             const container = document.getElementById('meetingsContainer');

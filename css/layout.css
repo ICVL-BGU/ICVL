@@ -201,28 +201,56 @@ footer p {
     padding-bottom: 5px;
 }
 
+
+/*publication properties */
 .publication-year {
     margin-bottom: 2rem;
 }
+
 .publication-year h2 {
     font-size: 1.5rem;
     color: #ff6600;
     border-bottom: 1px solid #444;
     padding-bottom: 5px;
+    cursor: pointer; /* Add cursor to indicate clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
 }
+
+.publication-year h2:hover {
+    color: #ff3300; /* Change color on hover */
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
 ul.public {
     list-style-type: none;
     padding: 0;
 }
+
 ul.public li {
     margin-bottom: 1rem;
     font-size: 1rem;
     line-height: 1.5;
+    position: relative; /* Required for positioning the ::before element */
+    padding-left: 1.5rem; /* Space for the disk */
 }
+
+ul.public li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #1e90ff;
+    border-radius: 50%; /* Makes the shape a disk */
+}
+
 ul.public li a {
     color: #1e90ff;
     text-decoration: none;
 }
+
+
 
 
 /* Research Grid */

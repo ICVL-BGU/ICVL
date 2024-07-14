@@ -92,9 +92,9 @@ function loadContent(page) {
             document.getElementById('content').innerHTML = xhr.responseText;
 
             // Check if the page being loaded is the publications page
-            if (page === 'pages/publications.html') {
-                fetchPublications();
-            }
+            // if (page === 'pages/publications.html') {
+            //     fetchPublications();
+            // }
             if (page === 'pages/seminar.html') {
                 loadSeminars();
             }

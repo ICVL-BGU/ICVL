@@ -7,7 +7,7 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: all 0.1s ease-out; /* Reduce transition duration */
 }
 
@@ -31,6 +31,7 @@ header.fixed .logo img {
 nav {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 nav ul {
@@ -39,6 +40,7 @@ nav ul {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 nav ul li {
@@ -109,24 +111,19 @@ footer p {
 
 /* Content Sections */
 .content {
-    display: block; /* Changed from flex to block */
+    display: block;
     padding: 20px;
 }
 
 .about-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: block;
 }
 
-.about-text {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
+.about-section img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 300px; /* Adjust as needed */
     border: 1px solid #416488;
 }
 
@@ -227,28 +224,35 @@ ul.public li a {
     text-decoration: none;
 }
 
+
+/* Research Grid */
 .research-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
 }
+
 .research-item {
     background: #faf7f7;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
-    width: calc(33.333% - 20px);
     transition: transform 0.2s;
+    box-sizing: border-box;
 }
+
 .research-item:hover {
     transform: scale(1.05);
 }
+
 .research-item img {
     border-radius: 8px;
-    width: 100%;
-    height: auto;
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
 }
+
 .research-item p {
     margin: 10px 0 0;
     font-size: 1.1em;

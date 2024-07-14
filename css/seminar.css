@@ -8,6 +8,13 @@
     color: #ff6600;
     border-bottom: 1px solid #444;
     padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+
+}
+
+.year-group h2:hover {
+    color: #ff3300; /* Change color on hover */
+    transform: scale(1.01); /* Slightly enlarge on hover */
 }
 
 .year-meetings {

@@ -16,8 +16,6 @@ function loadSeminars() {
                     const title = row.Title;
                     const abstract = row.Abstract;
                     const year =parseDate(date).getFullYear();
-                    console.log("year is : ",year," for row : ", title," row.Date: ",row.Date)
-
                     if (!meetingsByYear[year]) {
                         meetingsByYear[year] = [];
                     }
@@ -33,8 +31,7 @@ function loadSeminars() {
                     meetings.forEach(meeting => {
                         meetingHTML += `
                             <div class="meeting">
-                                <p class="date">${meeting.date}</p>
-                                <p class="group">${meeting.group}</p>
+                                <p class="date">${meeting.date} | ${meeting.group}</p>
                                 <p class="title meeting-title">${meeting.title}</p>
                                 <p class="abstract">${meeting.abstract}</p>
                             </div>

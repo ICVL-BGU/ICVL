@@ -1,0 +1,104 @@
+<h1>Square Jigsaw Puzzle Solving</h1>
+
+<section class="research-section">
+    <h2>Introduction</h2>
+    <p>It is quite likely that you, the reader, have tried to solve jigsaw puzzles before. Could computers do the same once given the bag of pieces? This problem has been studied progressively (though sporadically) since the 1960's, but only recently could algorithms began to handle problems of reasonable size at reasonable success rate. In 2011 we were proud to be the first group to have devised a computational solution which is both fully automatic, requires no manually provided hints, operates on puzzles having thousands of pieces, and does not with near perfect performance. As has become common in the field, we too focus on square pieces, if nothing else then for the elimination of shape cues that sometimes assist us (humans) when we solve such puzzles.</p>
+    <p>In the page below you will find and download material related to our research, including all the code, papers, image databases, and demos. But as a teaser, here on the right we are proud to present the first ever solution to the latest puzzle ever attempted by an automatic solver to date (July 2011) – no less than 10,000 pieces! A different visualization of this solution is also shown later on.</p>
+</section>
+
+<section class="research-section">
+    <h2>Media</h2>
+<iframe width="940" height="528" src="https://www.youtube.com/embed/Wt4MpAW4tHM" title="Biggest puzzle ever solved by machine!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section class="research-section">
+    <h2>Downloads</h2>
+    <p>Download Matlab Code (please refer to the Programmer’s Manual for additional documentation and instructions)</p>
+    <ul>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/GeneratePuzzle.m" role="link">GeneratePuzzle.m</a> – A function that scrambles an image</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolver.m" role="link">JigsawSolver.m</a> – The greedy jigsaw (V 2.19) solver code</li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Download Puzzle Data Sets</h2>
+    <ul>
+        <li><a href="http://people.csail.mit.edu/taegsang/Documents/jigsawCode.zip" role="link">The Cho et al. (2010) dataset</a>: 20 images. 432 parts of size 28×28. Solver’s source code included</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/ImageDB-540parts-McGill.zip" role="link">The McGill Calibrated Colour Image Database</a>: 20 images. 540 parts of size 28×28.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/ImageDB-805parts-BGU.zip" role="link">BGU-805 Dataset</a>: 20 images. 805 parts of size 28×28. If you need to use it, please cite <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Pomeranz_Shemesh_and_Ben_Shahar-A_Fully_Automated_Greedy_Square_Jigsaw_Puzzle_Solver.pdf" role="link">our CVPR 2011</a> paper.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/ImageDB-2360parts-BGU.zip" role="link">BGU-2360 Dataset</a>: 3 images. 2360 parts of size 28×28. If you need to use it, please cite <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Pomeranz_Shemesh_and_Ben_Shahar-A_Fully_Automated_Greedy_Square_Jigsaw_Puzzle_Solver.pdf" role="link">our CVPR 2011</a> paper.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/ImageDB-3300parts-BGU.zip" role="link">BGU-3300 Dataset</a>: 3 images. 3300 parts of size 28×28. If you need to use it, please cite <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Pomeranz_Shemesh_and_Ben_Shahar-A_Fully_Automated_Greedy_Square_Jigsaw_Puzzle_Solver.pdf" role="link">our CVPR 2011</a> paper.</li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Selected Demos (Higher quality than YouTube)</h2>
+    <ul>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverInActionMovie.wmv" role="link">JigsawSolverInActionMovie.wmv</a>: The greedy solver in action on a modest size problem</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverVisualizationMovie.wmv" role="link">JigsawSolverVisualizationMovie.wmv</a>: Visualization of the solution from randomly scrambled state to solved state.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverInAction-540parts.wmv" role="link">JigsawSolverInAction-540parts.wmv</a>: The solver in action on a 540 piece puzzle from the McGill DB.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverInAction-805parts.wmv" role="link">JigsawSolverInAction-805parts.wmv</a>: The solver in action on a 805 piece puzzle from the BGU-805 DB.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverInAction3300parts.wmv" role="link">JigsawSolverInAction3300parts.wmv</a>: The solver in action on a 3300 piece puzzle from the BGU-3300 set.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverInActionBiggestPuzzle-10000parts.wmv" role="link">JigsawSolverInActionBiggestPuzzle-10000parts.wmv</a>: The solver in action on a 10,000 piece puzzle.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/JigsawSolverVisualization10000parts.wmv" role="link">JigsawSolverVisualization10000parts.wmv</a>: Visualization of the 10,000 piece solution.</li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Papers</h2>
+    <ul>
+        <li><a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Pomeranz_Shemesh_and_Ben_Shahar-A_Fully_Automated_Greedy_Square_Jigsaw_Puzzle_Solver.pdf" role="link">CVPR 2011 paper</a>.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/AFullyAutomatedGreedySquareJigsawPuzzleSolver-supp.pdf" role="link">CVPR 2011 Supplemental material</a>: Shows many solver’s results on the images data bases.</li>
+        <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/Dolev_Pomeranz-Solving_The_Jigsaw_Problem.pdf" role="link">Thesis by Dolev Pomeranz</a></li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Talk</h2>
+    <p>This work was presented at the 2011 Israel Computer Vision Day</p>
+<iframe width="750" height="422" src="https://www.youtube.com/embed/E9qM8KS3t7s" title="Square Jigsaw Puzzle Solving Talk by Dolev Pomeranz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section class="research-section">
+    <h2>Inline Demos</h2>
+    <p>While our solver is available for download and experimentation, below you will find several demos covering a range of puzzle sizes and complexity. Each row in the table below shows on the left a visualization of the solution from an initial scrambled state to the final state obtained at the end of the computation, and on the right the actual progression of the solution from the single seed piece till the final state. All demos are available also in YouTube, but you may also download better quality videos in the Download section below.</p>
+</section>
+<section class="research-section">
+    <h2>Inline Demos</h2>
+    <p>While our solver is available for download and experimentation, below you will find several demos covering a range of puzzle sizes and complexity. Each row in the table below shows on the left a visualization of the solution from an initial scrambled state to the final state obtained at the end of the computation, and on the right the actual progression of the solution from the single seed piece till the final state. All demos are available also in YouTube, but you may also download better quality videos in the Download section below.</p>
+    <div class="inline-demos">
+        <div class="demo">
+            <div>A 432 piece puzzle</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/uu3_iex_RcI?rel=0&wmode=opaque" frameborder="0"></iframe>
+            <div>The solver in action.</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/PWIbKZ8TV2Y?rel=0&wmode=opaque" frameborder="0"></iframe>
+        </div>
+        <div class="demo">
+            <div>A 805 piece puzzle</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/X-Zx7VN_GTA" frameborder="0"></iframe>
+            <div>The solver in action.</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/smLu0uBAp9s?rel=0&wmode=opaque" frameborder="0"></iframe>
+        </div>
+        <div class="demo">
+            <div>A 3300 piece puzzle</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/UWSDi1t3IPM?rel=0&wmode=opaque" frameborder="0"></iframe>
+            <div>The solver in action.</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/-dN-AvXHLYk?rel=0&wmode=opaque" frameborder="0"></iframe>
+        </div>
+        <div class="demo">
+            <div>A 10000 piece puzzle</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/YtLtHa8ErEI" frameborder="0"></iframe>
+            <div>The solver in action.</div>
+            <iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/Wt4MpAW4tHM" frameborder="0"></iframe>
+        </div>
+    </div>
+</section>
+<section class="research-section">
+    <h2>Robotic Solver</h2>
+    <p>Why stop at puzzles inside the computer? Indeed, physical puzzles present new challenges, especially when it comes to the robust acquisition of piece appearance in the presence of noise, loosely controlled illumination, and aliasing due to pieces that are not aligned with the camera grid. We’ve made the first step, though, and the video below presents our prototype system.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/[VideoID]" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section class="research-section">
+    <h2>Acknowledgments</h2>
+    <p>This work was funded in part by the US Air Force European Office of Aerospace Research and Development (grant number FA8655-09-1-3016), the Israel Science Foundation (ISF grant No. 1245/08) and the European Commission in the 7th Framework Programme (CROPS GA no 246252). We also thank the generous support of the Frankel fund, the Paul Ivanier center for Robotics Research and the Zlotowski Center for Neuroscience at Ben-Gurion University.</p>
+</section>

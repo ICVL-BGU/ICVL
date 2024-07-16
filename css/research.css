@@ -1,0 +1,77 @@
+/* General research section styling */
+.research-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Flex behavior for sections with multiple items */
+.research-section {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+}
+
+/* General styling for images within research sections */
+.research-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Tiny border radius */
+    display: block;
+    margin: 0 auto 20px; /* Center images and add bottom margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* General styling for videos within research sections */
+.research-section video, .research-section iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Specific styling for images in image groups */
+.research-section .image-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* space between images */
+    justify-content: center;
+}
+
+.research-section .image-group figure {
+    width: 200px; /* set a uniform width */
+    text-align: center; /* center align the figcaption text */
+}
+
+.research-section .image-group img {
+    width: 200px; /* set a uniform width */
+    height: 200px; /* set a uniform height */
+    object-fit: contain; /* ensure images fit within the set dimensions without distortion */
+    border: 2px solid #ccc; /* optional: add a border around images */
+    border-radius: 10px; /* optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add a shadow for better appearance */
+    transition: transform 0.3s ease; /* smooth transition for the hover effect */
+}
+
+.research-section .image-group img:hover {
+    transform: scale(1.1); /* enlarge the image slightly on hover */
+}
+
+.research-section .image-group figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center; /* ensure text is centered under each image */
+    max-width: 200px; /* ensure the text width matches the image width */
+    overflow-wrap: break-word; /* wrap text to avoid overflow */
+}
+
+/* Specific link styling for research sections */
+.research-section a {
+    text-decoration: underline;
+}

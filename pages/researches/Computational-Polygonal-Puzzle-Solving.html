@@ -1,0 +1,100 @@
+<h1>Computational Polygonal Puzzle Solving</h1>
+
+<section class="research-section">
+    <h2>Abstract</h2>
+    <p>Many real-life challenges can be abstracted as jigsaw puzzles – the construction of a coherent whole from a set of unordered visual fragments. Applications range from archeology and biology, through security and forensics, to direct image editing and many more and for this reason jigsaw puzzle problems have intrigued computer scientists since the 1960’s. The field, however, evolved to cover various variations of the problem, and curiously, most of the literature in the last two decades (2000-2020) has focused on less realistic and more limited puzzles whose pieces are identical squares.</p>
+    <p>We too have worked in this area and were even proud to suggest the first-ever <a href="https://icvl.cs.bgu.ac.il/automatic-jigsaw-puzzle-solving/" role="link">fully automatic square Jigsaw puzzle solver</a> that provided a leap in the scale of solvable puzzles. But at the same time it was clear that this type of abstraction is extremely limited in its potential applications to real-life problems. Consequently, we started to explore polygonal jigsaw puzzles, using formal generation models that are also allow rigorous analysis.</p>
+    <p>The Crossing Cuts Puzzle model is a puzzle generation model inspired by (but nevertheless different than) the <a href="https://en.wikipedia.org/wiki/Lazy_caterer%27s_sequence" role="link">Lazy Caterer sequence</a>. Taking a general convex polygon, one obtains a Crossing Cut puzzle by cutting through it with multiple straight cuts of arbitrary positions and directions. Unlike the Lazy Caterer sequence, the cuts in Crossing Cuts puzzles are completely random without trying to maximize the number of pieces, a property that entails numerous compelling stochastic properties, including on the number of pieces. To make the story even more interesting, we allow the pieces to erode, a particular geometrical noise that is inspired from real life applications (in particular, in archeology).</p>
+    <p>Crossing Cuts puts puzzles can be <em>apictorial</em>, but they can also be <em>pictorial</em> once the original convex polygon is covered with an image before the cuts are applied. The following illustrates one puzzle of each type.</p>
+</section>
+
+<section class="research-section">
+    <h2>Media</h2>
+    <div class="image-group">
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/pieces_example1.png" alt="Apictorial Polygonal Puzzle - Bag of pieces">
+            <figcaption>Apictorial Polygonal Puzzle - Bag of pieces</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/solved_example1.png" alt="Apictorial Polygonal Puzzle - Ground Truth Solution">
+            <figcaption>Apictorial Polygonal Puzzle - Ground Truth Solution</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/pieces_example2.png" alt="Pictorial Polygonal Puzzle - Bag of Pieces">
+            <figcaption>Pictorial Polygonal Puzzle - Bag of Pieces</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/solved_example2.png" alt="Pictorial Polygonal Puzzle - Ground Truth Solution">
+            <figcaption>Pictorial Polygonal Puzzle - Ground Truth Solution</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="research-section">
+    <h2>Demos</h2>
+        <video src="https://icvl.cs.bgu.ac.il/wp-content/uploads/2022/02/CrossingCuts-400_Pieces-5_Loop_Levels.mp4" controls></video>
+        <p>A complete reconstruction process of a 400 pieces apictorial crossing cuts puzzle.</p>
+        <video src="https://icvl.cs.bgu.ac.il/wp-content/uploads/2022/02/pictorial_merger_fast.mp4" controls></video>
+        <p>A fast reconstruction of an 18 pieces pictorial crossing cuts puzzle</p>
+</section>
+
+<section class="research-section">
+    <h2>Code (Python)</h2>
+    <p>The code is free to use for academic purposes Under the GNU Licence terms, and with proper citation to the paper shown on this page. You can download it <a href="https://drive.google.com/file/d/1xvLiGuc-ztl2S5xj2D2wWgF3CXZKWxfO/view?usp=sharing">here</a>.</p>
+</section>
+
+<section class="research-section">
+    <h2>Puzzle Datasets</h2>
+    <p>You can view and download our puzzle datasets from this <a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">portal</a>, in which they are separated into 5 different databases:</p>
+    <ul>
+        <li><a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">DB1</a>: Apictorial puzzles with a circular shape for measurement of statistical properties (220 puzzles).</li>
+        <li><a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">DB2</a>: General apictorial puzzles for solvers evaluation (15 puzzles).</li>
+        <li><a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">DB3</a>: Perturbed square pictorial puzzles (40 puzzles).</li>
+        <li><a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">DB4</a>: General pictorial puzzles (62 puzzles).</li>
+        <li><a href="https://icvl.cs.bgu.ac.il/puzzle-solving-datasets/" role="link">DB5</a>: Square pictorial puzzles (181 puzzles).</li>
+    </ul>
+    <p>Underlying the datasets is a procedure for selecting a random global shape and the random cuts. The former is based on the convex hull of a set of random sample points and the cuts are selected by pairs of random points in the interior of this convex hull.</p>
+    <p>An example of one apictorial synthesized polygonal puzzle (30 cuts, 200 pieces) is shown in this figure. On the left are the random points and their convex hull, in the middle column are the cuts and the ground truth solution, and on the right are the pieces after randomly scrambling them both in position and orientation, or what we call the bag of pieces. This bag is also the riddle to be solved, and thus the input provided to potential solvers. If the puzzle is intended to be pictorial, the global polygon is covered with a random image selected from a public domain repository.</p>
+    <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/puzzle_example.png" alt="Puzzle Example">
+
+    <p>Here are selected examples from the different DBs. More detailed depiction is in the <a href="https://icvl.cs.bgu.ac.il/polygonal-puzzles-datasets/">DBs portal.</a></p>
+    <div class="image-group">
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/DB1.1-e1645303166348.png">
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/DB1.2-e1645303197125.png">
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/DB3-e1645303209779.png">
+        </figure>
+        <figure>
+            <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/DB4-e1645303217910.png">
+        </figure>
+    </div>
+</section>
+
+<section class="research-section">
+    <h2>Real-Life Puzzle Pieces</h2>
+    <p>Crossing Cuts puzzles can also be real, not only synthesized in the computer. To cope with these we first need to produce a proper digital representation of its pieces with minimal loss of relevant information. Acquired with a digital camera, a vectorial vectorial representation is generated by properly fitting boundary segments to lines, allowing subpixel accuracy in the digital pieces and facilitating solutions by the same solver mentioned above. Credit goes to Roy Hershfinkel who developed the acquisition process for his research project and the following is a photograph os the pieces on the left next to the puzzle solution on the right.</p>
+    <img src="./assets/research/Computational-Polygonal-Puzzle-Solving/real-life.png">
+</section>
+
+<section class="research-section">
+    <h2>Going Physical – A Robotic Solver</h2>
+    <p>Why stop at physical pieces that are solved in the computer? Physical puzzles should be solved… physically. We implemented a demo system that seeks to close the loop, from acquisition of physical pieces, solution by our solver, and reconstruction back on the physical pieces using a robotic arm that automatically grabs the pieces, reorient position them, so the reconstructed puzzle is obtained. Credit goes to Idan Bandoil and Nir Barel who implemented this for their research project.</p>
+    <video src="https://icvl.cs.bgu.ac.il/wp-content/uploads/2022/02/Robotis-CrossingCuts-009_Pieces.mp4" controls></video>
+</section>
+
+<section class="research-section">
+    <h2>Papers</h2>
+    <ul>
+        <li>P. Harel and O. Ben-Shahar, <em>Pictorial and apictorial polygonal jigsaw puzzles: The lazy caterer model, properties, and solvers</em>, arXiv:2008.07644v2, 2021.</li>
+        <li>P. Harel and O. Ben-Shahar, <em>Crossing cuts polygonal puzzles: Models and Solvers</em>, In the Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), June 2021.</li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Acknowledgments</h2>
+    <p>This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 964854, the Helmsley Charitable Trust through the ABC Robotics Initiative, and the Frankel Fund of the Computer Science Department at Ben-Gurion University.</p>
+</section>

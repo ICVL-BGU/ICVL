@@ -1,6 +1,7 @@
-// Load default content (About page) when the page first loads
+// Load default content (Home page) when the page first loads
 window.onload = function () {
-    loadContent('pages/home.html');
+    loadContent('pages/home.html', true);
+    history.replaceState({ page: 'pages/home.html' }, "");
 };
 
 function adjustPadding() {
@@ -35,7 +36,6 @@ function toggleMenu() {
 let slideIndex = 1;
 let slideInterval;
 
-// showSlides(slideIndex);
 startAutoSlide();
 
 function plusSlides(n) {
@@ -50,22 +50,19 @@ function currentSlide(n) {
 
 function showSlides(n) {
     if (document.querySelector(".slider")) {
-
         let slides = document.getElementsByClassName("slide");
         if (n > slides.length) {
-            slideIndex = 1
+            slideIndex = 1;
         }
         if (n < 1) {
-            slideIndex = slides.length
+            slideIndex = slides.length;
         }
 
-        // Fade out all slides
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.opacity = 0;
             slides[i].style.display = "none";
         }
 
-        // Fade in the target slide
         slides[slideIndex - 1].style.display = "block";
         setTimeout(() => {
             slides[slideIndex - 1].style.opacity = 1;
@@ -76,7 +73,7 @@ function showSlides(n) {
 function startAutoSlide() {
     slideInterval = setInterval(() => {
         plusSlides(1);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 }
 
 function resetAutoSlide() {
@@ -84,17 +81,17 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-function loadContent(page) {
+function loadContent(page, addToHistory = true) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', page, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             document.getElementById('content').innerHTML = xhr.responseText;
 
-            // Check if the page being loaded is the publications page
-            // if (page === 'pages/publications.html') {
-            //     fetchPublications();
-            // }
+            if (addToHistory) {
+                history.pushState({ page: page }, "");
+            }
+
             if (page === 'pages/seminar.html') {
                 loadSeminars();
             }
@@ -103,4 +100,8 @@ function loadContent(page) {
     xhr.send();
 }
 
-// Fetch publications function
+window.onpopstate = function (event) {
+    if (event.state && event.state.page) {
+        loadContent(event.state.page, false);
+    }
+};

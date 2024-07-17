@@ -5,16 +5,16 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    text-align: justify;
     font-size: 1.1em;
     line-height: 1.8;
 }
 
 /* Flex behavior for sections with multiple items */
 .research-section {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: left;
 }
 
 /* General styling for images within research sections */
@@ -30,8 +30,10 @@
 /* General styling for videos within research sections */
 .research-section video, .research-section iframe {
     width: 100%;
+    max-width: 560px; /* Maintain a max-width for better appearance */
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 20px auto; /* Center the video and add top and bottom margin */
+    display: block;
 }
 
 /* Specific styling for images in image groups */
@@ -74,6 +76,7 @@
 .research-section a {
     text-decoration: underline;
 }
+
 /* Grid layout for inline demos */
 .inline-demos {
     display: grid;

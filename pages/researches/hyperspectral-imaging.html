@@ -1,0 +1,50 @@
+<h1>Hyperspectral Imaging from low-cost sensors</h1>
+
+<section class="research-section">
+    <p>In contrast to most artificial and biological optical sensors, hyperspectral imaging systems allow us to accurately recover the full spectral profile of each point in the observed scene. This rich spectral information has been explored and exploited in many fields such as astronomy, biology, chemistry, agriculture, geology, environmental studies, and in a wide variety of other academic and commercial applications. Here at the ICVL, we are using cutting-edge equipment to explore new avenues of research in the field of hyperspectral imagery. The project described on this page explores hyperspectral acquisition from very low-cost multispectral (and in particular, RGB) sensors.</p>
+</section>
+
+<section class="research-section">
+    <h2>BGU ICVL Hyperspectral Database</h2>
+    <p>The interdisciplinary computational vision lab maintains a constantly growing collection of natural hyperspectral images. The database currently contains 201 images at 1392×1300 spatial resolution over 519 spectral bands. Get it <a href="https://icvl.cs.bgu.ac.il/hyperspectral">here.</a></p>
+        <figure>
+            <img src="./assets/research/hyperspectral-imaging/database-300x206.png">
+        </figure>
+</section>
+
+<section class="research-section">
+    <h2>Hyperspectral from RGB</h2>
+    <img src="./assets/research/hyperspectral-imaging/Cover_Graphic-1024x515.png">
+    <p>RGB imaging systems capture a surprising amount of spectral information. By leveraging sparse overcomplete dictionaries, it is possible to recover hyperspectral information from RGB images.</p>
+</section>
+
+<section class="research-section">
+    <h2>Filter Optimization for Hyperspectral Estimation</h2>
+    <img src="./assets/research/hyperspectral-imaging/Screenshot_102017_030853_PM-1024x322.jpg" alt="Filter Optimization Diagram">
+    <p>While many methods attempt to recover hyperspectral information from RGB images, not all RGB cameras were created equal. Selecting an optimal RGB camera can increase performance by over 20%.</p>
+    <p>Replacing RGB filters with customized filter sets can improve performance even further, but finding an optimal filter set within large collections is no simple task.</p>
+    <p>Evolutionary optimization allows us to efficiently explore large filter collections, quickly finding optimal or near-optimal filter sets for hyperspectral estimation.</p>
+</section>
+<section class="research-section">
+    <h2>Software</h2>
+    <p>Sample code demonstrating the hyperspectral recovery methodology described in “<a href="https://www.cs.bgu.ac.il/~obs/Publications/2016-Arad_and_Ben_Shahar-Sparse_Recovery_of_Hyperspectral_Signal_from_Natural_RGB_Images.pdf" role="link">Sparse Recovery of Hyperspectral Signal from Natural RGB Images</a>” can be found on the project GitHub repository:</p>
+    <ul>
+        <li><a href="https://github.com/icvl/shred" role="link">https://github.com/icvl/shred</a></li>
+    </ul>
+</section>
+<section class="research-section">
+    <h2>Papers</h2>
+    <ul>
+        <li>B. Arad, and O. Ben-Shahar, <a href="https://icvl.cs.bgu.ac.il/wp-content/uploads/2017/10/1427.pdf" role="link">Filter Selection for Hyperspectral Estimation</a>, In the Proceedings of the IEEE International Conference on Computer Vision (ICCV), Venice, Italy, October 2017.</li>
+        <li>B. Arad and O. Ben-Shahar, <a href="https://www.cs.bgu.ac.il/~obs/Publications/2016-Arad_and_Ben_Shahar-Sparse_Recovery_of_Hyperspectral_Signal_from_Natural_RGB_Images.pdf" role="link">Sparse Recovery of Hyperspectral Signal from Natural RGB Images</a>, In the Proceedings of the European Conference on Computer Vision (ECCV), Amsterdam, The Netherlands, October 2016.</li>
+    </ul>
+</section>
+<section class="research-section">
+    <h2>Video</h2>
+        <iframe loading="lazy" title="EMVA Presentation" width="500" height="281" src="https://www.youtube.com/embed/0PGlOvwXd30?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Presentation at the 2nd <a href="https://emva-forum.org" role="link">EMVA Forum</a> at AIT.</p>
+</section>
+<section class="research-section">
+    <h2>Acknowledgments</h2>
+    <p>This research was supported in part by the by the Israel Science Foundation (ISF FIRST/BIKURA Grant 281/15) and the European Commission (Horizon 2020 grant SWEEPER GA no 644313). We also thank the Frankel Fund and the Helmsley Charitable Trust through the ABC Robotics Initiative, both at Ben-Gurion University of the Negev.</p>
+</section>

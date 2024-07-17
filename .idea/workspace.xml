@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding two more researches + css adjustments">
+      <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alfital2&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alfital2/ICVL.git",
+    "accountId": "02bb1fd8-b732-48d8-97c4-2bd057832774"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "alfital2",
+    "repository": "ICVL"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2it0Zi4mQvgiihdVJGwosF8STeE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "improve__responsiveness.tal",
+    "last_opened_file_path": "/Users/talalfi/Documents/פרוייקטי תכנות/אתר מעבדה/ICVL/pages/researches",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/researches" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/research/multi-phase" />
+      <recent name="$PROJECT_DIR$/assets/seminar" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/researches/gifs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ICVL/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="" />
+      <created>1720294624366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720294624366</updated>
+      <workItem from="1720294625596" duration="11273000" />
+      <workItem from="1720338348839" duration="23016000" />
+      <workItem from="1720899294935" duration="162000" />
+      <workItem from="1720899519069" duration="41789000" />
+    </task>
+    <task id="LOCAL-00001" summary="before major css refactor">
+      <option name="closed" value="true" />
+      <created>1720296760252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720296760252</updated>
+    </task>
+    <task id="LOCAL-00002" summary="after refactor + adding members + about">
+      <option name="closed" value="true" />
+      <created>1720303591358</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720303591358</updated>
+    </task>
+    <task id="LOCAL-00003" summary="publications + research">
+      <option name="closed" value="true" />
+      <created>1720345459551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720345459551</updated>
+    </task>
+    <task id="LOCAL-00004" summary="assets">
+      <option name="closed" value="true" />
+      <created>1720346411916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720346411916</updated>
+    </task>
+    <task id="LOCAL-00005" summary="assets">
+      <option name="closed" value="true" />
+      <created>1720352133523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720352133523</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix path">
+      <option name="closed" value="true" />
+      <created>1720352382213</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720352382213</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix path">
+      <option name="closed" value="true" />
+      <created>1720352583905</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720352583905</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix path - test">
+      <option name="closed" value="true" />
+      <created>1720352937456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720352937456</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix path - test">
+      <option name="closed" value="true" />
+      <created>1720353216985</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720353216985</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix path, no need with '..' before path">
+      <option name="closed" value="true" />
+      <created>1720360489395</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720360489395</updated>
+    </task>
+    <task id="LOCAL-00011" summary="removing _config.yml">
+      <option name="closed" value="true" />
+      <created>1720360880944</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720360880944</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test">
+      <option name="closed" value="true" />
+      <created>1720361679170</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720361679170</updated>
+    </task>
+    <task id="LOCAL-00013" summary="undo test">
+      <option name="closed" value="true" />
+      <created>1720361849958</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720361849958</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test 404 solution">
+      <option name="closed" value="true" />
+      <created>1720361977849</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720361977849</updated>
+    </task>
+    <task id="LOCAL-00015" summary="revert">
+      <option name="closed" value="true" />
+      <created>1720362362941</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720362362941</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix publications">
+      <option name="closed" value="true" />
+      <created>1720362947007</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720362947007</updated>
+    </task>
+    <task id="LOCAL-00017" summary="remove 404">
+      <option name="closed" value="true" />
+      <created>1720373656830</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720373656830</updated>
+    </task>
+    <task id="LOCAL-00018" summary="relative path added">
+      <option name="closed" value="true" />
+      <created>1720373991988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720373991988</updated>
+    </task>
+    <task id="LOCAL-00019" summary="revert">
+      <option name="closed" value="true" />
+      <created>1720374288742</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720374288742</updated>
+    </task>
+    <task id="LOCAL-00020" summary="dani test">
+      <option name="closed" value="true" />
+      <created>1720374988140</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720374988140</updated>
+    </task>
+    <task id="LOCAL-00021" summary="dani solution">
+      <option name="closed" value="true" />
+      <created>1720376263952</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720376263952</updated>
+    </task>
+    <task id="LOCAL-00022" summary="dani solution">
+      <option name="closed" value="true" />
+      <created>1720376534705</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720376534705</updated>
+    </task>
+    <task id="LOCAL-00023" summary="dani solution">
+      <option name="closed" value="true" />
+      <created>1720376702511</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720376702511</updated>
+    </task>
+    <task id="LOCAL-00024" summary="adding seminars (initial )">
+      <option name="closed" value="true" />
+      <created>1720907187160</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720907187160</updated>
+    </task>
+    <task id="LOCAL-00025" summary="path fix">
+      <option name="closed" value="true" />
+      <created>1720913478427</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720913478427</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refining">
+      <option name="closed" value="true" />
+      <created>1720939998502</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1720939998502</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refining">
+      <option name="closed" value="true" />
+      <created>1720940162793</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1720940162793</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refining">
+      <option name="closed" value="true" />
+      <created>1720946462459</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720946462459</updated>
+    </task>
+    <task id="LOCAL-00029" summary="refining">
+      <option name="closed" value="true" />
+      <created>1720950316425</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1720950316425</updated>
+    </task>
+    <task id="LOCAL-00030" summary="pushing image resource">
+      <option name="closed" value="true" />
+      <created>1720953073093</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1720953073093</updated>
+    </task>
+    <task id="LOCAL-00031" summary="assets">
+      <option name="closed" value="true" />
+      <created>1721135289634</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1721135289634</updated>
+    </task>
+    <task id="LOCAL-00032" summary="code for two researches as POC">
+      <option name="closed" value="true" />
+      <created>1721135309527</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1721135309527</updated>
+    </task>
+    <task id="LOCAL-00033" summary="adding Square Jigsaw Puzzle Solving">
+      <option name="closed" value="true" />
+      <created>1721159948151</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1721159948151</updated>
+    </task>
+    <task id="LOCAL-00034" summary="adding two more researches + css adjustments">
+      <option name="closed" value="true" />
+      <created>1721240233824</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1721240233824</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="before major css refactor" />
+    <MESSAGE value="after refactor + adding members + about" />
+    <MESSAGE value="publications + research" />
+    <MESSAGE value="fix path" />
+    <MESSAGE value="fix path - test" />
+    <MESSAGE value="fix path, no need with '..' before path" />
+    <MESSAGE value="removing _config.yml" />
+    <MESSAGE value="test" />
+    <MESSAGE value="undo test" />
+    <MESSAGE value="test 404 solution" />
+    <MESSAGE value="fix publications" />
+    <MESSAGE value="remove 404" />
+    <MESSAGE value="relative path added" />
+    <MESSAGE value="revert" />
+    <MESSAGE value="dani test" />
+    <MESSAGE value="dani solution" />
+    <MESSAGE value="adding seminars (initial )" />
+    <MESSAGE value="path fix" />
+    <MESSAGE value="refining" />
+    <MESSAGE value="pushing image resource" />
+    <MESSAGE value="assets" />
+    <MESSAGE value="code for two researches as POC" />
+    <MESSAGE value="adding Square Jigsaw Puzzle Solving" />
+    <MESSAGE value="adding two more researches + css adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding two more researches + css adjustments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/seminar.html</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

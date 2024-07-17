@@ -1,5 +1,9 @@
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+        width: 95%;
+    }
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -63,6 +67,7 @@
 @media (max-width: 480px) {
     .main-container {
         padding: 10px;
+        width: 100%;
     }
 
     .about-section {
@@ -80,6 +85,11 @@
 
     header .logo img {
         width: 150px;
+    }
+
+    .research-item img{
+    width: 200px;
+    height: auto;
     }
 
     .slider .slides {

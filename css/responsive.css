@@ -92,6 +92,10 @@
     height: auto;
     }
 
+    p , li{
+        font-size: 14px;
+    }
+
     .slider .slides {
         flex-direction: column;
     }

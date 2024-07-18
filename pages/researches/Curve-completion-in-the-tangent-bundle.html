@@ -1,0 +1,69 @@
+<section class="research-section">
+    <h2>Curve completion in the tangent bundle</h2>
+    <h3>Curve Completion – What is it all about</h3>
+    <p>The ease of seeing hides many complexities. A fundamental problem is the one of fragmentation as we are able to perceive objects although they are optically incomplete or fragmented, in particular due to occlusion. A central mechanism that addresses this difficulty in biological and artificial visual systems is contour or <strong>curve completion</strong>, which has been studied in different ways in the different vision sciences. Without denying the role of top down influences, curve completion is known to be much influenced by bottom up, stimulus driven processes, which often override explicit knowledge about the scene or even a lifetime of visual experience. Want to experience of the strength of curve completion? Move the cursor over the field of circles on the right to introduce some occluders and observe how the perception and interpretation of the scene changes drastically, from circles to vertical waves. The same phenomenon can be demonstrated in reversed. No doubt you see a nice cylindrical neck behind the occluder of the ostrich. But you might be surprised when you move your mouse over the image to reveal the true shape. The examples below show some more shape completion examples that conflict the context, and one modal completion where observers report illusory shape.</p>
+    <div class="image-group">
+        <img src="./assets/research/Curve-completion-in-the-tangent-bundle/circles.png" alt="Circle Occlusion Example">
+        <img src="./assets/research/Curve-completion-in-the-tangent-bundle/ostrich.png" alt="Ostrich Example">
+    </div>
+</section>
+
+<section class="research-section">
+    <h3>The tangent bundle approach</h3>
+    <p>Recent computational, neurophysiological, and psychophysical studies suggest that completed contours emerge from activation patterns of orientation selective cells in the primary visual cortex, or V1. In this project we suggest a theory that models these patterns as 3D curves in the mathematical continuous space R^2 – S^1, a.k.a. the unit tangent bundle associated with the image plane R^2. This space nicely abstracts the basic functional organization of V1 and thus we propose that the completed shape may follow physical/biological principles that are conveniently abstracted and analyzed in this space. We implement our theories by numerical and biologically plausible algorithms to show ample experimental results of visually completed curves in various scenes.</p>
+</section>
+
+<section class="research-section">
+    <h2>Demos</h2>
+    <p>Our research into curve completion in the tangent bundle explores various completion principles and implementation techniques. While the technical details must be obtained from the papers, here we show some visual results.</p>
+
+    <h3>Minimum length in the tangent bundle – Analytic/numerical results</h3>
+    <p>These demos show the result of the completion process based on the least action principle in the tangent bundle. In the unit tangent bundle this sole biologically-plausible principle translates to a 3D curve of shortest length. Unlike in Euclidean space, in the tangent bundle the shortest curve that also project to a legitimate visual curve in the image plane cannot be a straight line, so problem becomes one of minimizing the length functional under certain differential constraints. The obtained predictions are strikingly perceptually consistent. Please move your mouse over each of the images to see the computational completed curve (or curves) for the stimulus presented. In all cases, the inducers (position and orientation) were provided manually.</p>
+</section>
+
+<section class="research-section">
+    <h3>Minimum length in the tangent bundle – Distributed solution with locally connected parallel networks</h3>
+    <p>Nobody expects the biological tissue to apply calculus of variations directly (to solve the constrained length functions) or use PDE solvers explicitly. Can the theory be justified as biologically plausible, then? Well, it turns out that it is possible to approximate the solution in a completely decentralized fashion with a network of distributed units (neurons), all of which perform computational functions known to exist in the early visual system. The demos below show the progression of the completion process in such a biologically-plausible parallel network. Each iteration is a frame and each white point signals an active neuron in the network that participates in the representation of the completed curve.</p>
+</section>
+<section class="research-section">
+    <h2>Tangent Bundle Elastica (TBE)</h2>
+    <p>MLTB seek to minimize the energy spent by the biological tissue as measured by the number of active neurons necessary for the representation of the completed contour. But another objective of the biological tissue could be the optimization of the active connections (synapses) between those cells. Tangent Bundle Elastica theory seeks to model this process while utilizing observed statistics on the long range horizontal connections between neuron the primary visual cortex. Proper abstraction leads to completions based on the least bending 3D curve in the unit tangent bundle under admissibility constraints, a theory that combined both the axiomatic approach in curve completion (where 2D elastica has been prominent) and the mechanistic tangent bundle theory. The completion results are not only perceptually superior but also provide a rigorous computational prediction that inducer curvatures greatly affects the shape of the completed curve, as indeed indicated by human perception.</p>
+    <p>There are various ways to experience the effect of inducer curvature on contour completion. See for example the demo on the right, where the inducers penetrating from the left of the half disks all have the same zero orientation at the point of impact, but the completions tend to be different due to the different inducer curvatures. In particular, ask yourself which of the two curve segment on the right hand side of the half disks continue the one coming from left. The zero curvature contour is the only one with somewhat uncertain perceptual results.</p>
+    <p>With this in mind, the following figures show some representative completion results by TBE and comparison to some other popular models from the literature. Please hover above the images for closeup and also refer to the paper for legend and additional descriptions.</p>
+    <div class="image-group">
+        <figure>
+            <img src="./assets/research/Curve-completion-in-the-tangent-bundle/TBE-Fig07A-Effect_of_Inducer_Curvature.bmp" alt="Image description 1">
+            <figcaption>Image description 1</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Curve-completion-in-the-tangent-bundle/TBE-Fig09-Completions-with-Effect_of_Inducer_Curvature.bmp" alt="Image description 2">
+            <figcaption>Image description 2</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Curve-completion-in-the-tangent-bundle/TBE-Fig12-Exmaple-Completions.bmp" alt="Image description 1">
+            <figcaption>Image description 1</figcaption>
+        </figure>
+        <figure>
+            <img src="./assets/research/Curve-completion-in-the-tangent-bundle/TBE-Fig13-Exmaple-Completions.bmp" alt="Image description 2">
+            <figcaption>Image description 2</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="research-section">
+    <h2>Papers</h2>
+    <ul>
+        <li>G. Nir, B. Arad, and O. Ben-Shahar, <strong><a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2017-Nir_Cohen_Arad_Ben_Shahar-Multi_Inducer_Grouping_for_Curve_Compeltion.pdf" role="link">Multi inducer grouping for curve completion: Perceptual and computational exploration</a></strong>, the <em>Journal of Vision (JOV)</em>, 17(9):8, 1-15, 2017</li>
+        <li>O.Ben-Shahar and G. Ben-Yosef, <strong><a href="https://www.cs.bgu.ac.il/~ben-shahar/Publications/2015-Ben_Shahar_and_Ben_Yosef-Tangent_Bundle_Elastica_and_Computer_Vision.pdf" role="link">Tangent bundle elastica and computer vision</a></strong>, <em>IEEE Transaction on Pattern Analysis and Machine Intelligence (PAMI)</em>, 37(1), pp:161-174, 2015.</li>
+        <li>G. Ben-Yosef and O.Ben-Shahar, <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2012-Ben_Yosef_and_Ben_Shahar-Tangent_Bundle_Curve_Completion_with_Locally_Connected_Parallel_Networks.pdf" role="link"><strong>Tangent bundle curve completion with locally connected parallel networks</strong></a>, in <em>Neural Computation</em>, 24(12), 3277-3316, 2012.</li>
+        <li>G. Ben-Yosef and O.Ben-Shahar, <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2012-Ben_Yosef_and_Ben_Shahar-A_Tangent_Bundle_Theory_for_Visual_Curve_Completion.pdf" role="link"><strong>A tangent bundle theory for visual curve completion</strong></a>, in <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2012.</li>
+        <li>G. Ben-Yosef and O.Ben-Shahar, <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2010-Ben_Yosef_and_Ben_Shahar-A_Biologically_Inspired_Theory_for_Non_Axiomatic_Parametric_Curve_Completion.pdf" role="link"><strong>A biologically-inspired theory for non-axiomatic parametric curve completion</strong></a>, in the Proceedings of the <em>Asian conference on Computer Vision (ACCV)</em>, 2010.</li>
+        <li>G. Ben-Yosef and O.Ben-Shahar, <a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2010-Ben_Yosef_and_Ben_Shahar-Minimum_Length_in_the_Tangent_Bundle_as_a_Model_for_Curve_Completion.pdf" role="link"><strong>Minimum length in the tangent bundle as a model for curve completion</strong></a>, in the Proceedings of the <em>IEEE conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2010.</li>
+    </ul>
+</section>
+
+<section class="research-section">
+    <h2>Acknowledgments</h2>
+    <p>This work was funded in part by the European Commission in the 7th Framework Programme (CROPS GA no. 246252) and the Israel Science Foundation (ISF grant No. 259/12). We also thank the generous support of the Frankel fund, the Paul Ivanier center for Robotics Research and the Zlotowski Center for Neuroscience at Ben-Gurion University of the Negev.</p>
+</section>
+

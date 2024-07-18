@@ -19,7 +19,7 @@
 
 /* General styling for images within research sections */
 .research-section img {
-    max-width: 100%;
+    max-width: 100%; /* Allow images to scale with the container */
     height: auto;
     border-radius: 4px; /* Tiny border radius */
     display: block;
@@ -40,36 +40,37 @@
 .research-section .image-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* space between images */
+    gap: 20px; /* Space between images */
     justify-content: center;
 }
 
 .research-section .image-group figure {
-    width: 200px; /* set a uniform width */
-    text-align: center; /* center align the figcaption text */
+    flex: 1; /* Allow figures to grow and shrink */
+    text-align: center; /* Center align the figcaption text */
 }
 
 .research-section .image-group img {
-    width: 200px; /* set a uniform width */
-    height: 200px; /* set a uniform height */
-    object-fit: contain; /* ensure images fit within the set dimensions without distortion */
-    border: 2px solid #ccc; /* optional: add a border around images */
-    border-radius: 10px; /* optional: add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add a shadow for better appearance */
-    transition: transform 0.3s ease; /* smooth transition for the hover effect */
+    width: 100%; /* Allow images to scale with their container */
+    max-width: 500px; /* Ensure images do not take more than 50% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure images fit within the set dimensions without distortion */
+    border: 2px solid #ccc; /* Optional: add a border around images */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better appearance */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
 .research-section .image-group img:hover {
-    transform: scale(1.1); /* enlarge the image slightly on hover */
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
 }
 
 .research-section .image-group figcaption {
     margin-top: 8px;
     font-size: 0.9em;
     color: #666;
-    text-align: center; /* ensure text is centered under each image */
-    max-width: 200px; /* ensure the text width matches the image width */
-    overflow-wrap: break-word; /* wrap text to avoid overflow */
+    text-align: center; /* Ensure text is centered under each image */
+    max-width: 200px; /* Ensure the text width matches the image width */
+    overflow-wrap: break-word; /* Wrap text to avoid overflow */
 }
 
 /* Specific link styling for research sections */

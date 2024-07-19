@@ -1,8 +1,50 @@
-// Load default content (Home page) when the page first loads
+let firefoxHistory = [];
+let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
 window.onload = function () {
+    console.log("window.onload");
     loadContent('pages/home.html', true);
-    history.replaceState({ page: 'pages/home.html' }, "");
+    // history.replaceState({ page: 'pages/home.html' }, "");
+    // firefoxHistory.push({ page: 'pages/home.html' });
 };
+
+function loadContent(page, addToHistory = true) {
+    console.log("loadContent");
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', page, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('content').innerHTML = xhr.responseText;
+
+            if (addToHistory) {
+                console.log("addToHistory : ", page);
+                history.pushState({ page: page }, "");
+                console.log(history);
+                firefoxHistory.push({ page: page });
+            }
+
+            if (page === 'pages/seminar.html') {
+                loadSeminars();
+            }
+        }
+    };
+    xhr.send();
+}
+
+window.onpopstate = function (event) {
+        console.log("onpopstate");
+        console.log("event is: ", event)
+    if (event.state && event.state.page) {
+        loadContent(event.state.page, false);
+    } else if (isFirefox  && firefoxHistory.length > 1) {
+        // Handle Firefox initial popstate with null state
+        firefoxHistory.pop(); // Remove the current state
+        const lastState = firefoxHistory[firefoxHistory.length - 1]; // Get the previous state
+        loadContent(lastState.page, false);
+    }
+};
+
 
 function adjustPadding() {
     var header = document.querySelector('header');
@@ -80,28 +122,3 @@ function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
 }
-
-function loadContent(page, addToHistory = true) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', page, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('content').innerHTML = xhr.responseText;
-
-            if (addToHistory) {
-                history.pushState({ page: page }, "");
-            }
-
-            if (page === 'pages/seminar.html') {
-                loadSeminars();
-            }
-        }
-    };
-    xhr.send();
-}
-
-window.onpopstate = function (event) {
-    if (event.state && event.state.page) {
-        loadContent(event.state.page, false);
-    }
-};

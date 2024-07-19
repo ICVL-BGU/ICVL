@@ -9,7 +9,6 @@ window.onload = function () {
 };
 
 function loadContent(page, addToHistory = true) {
-    console.log("loadContent");
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', page, true);
@@ -18,9 +17,7 @@ function loadContent(page, addToHistory = true) {
             document.getElementById('content').innerHTML = xhr.responseText;
 
             if (addToHistory) {
-                console.log("addToHistory : ", page);
                 history.pushState({ page: page }, "");
-                console.log(history);
                 firefoxHistory.push({ page: page });
             }
 
@@ -33,8 +30,6 @@ function loadContent(page, addToHistory = true) {
 }
 
 window.onpopstate = function (event) {
-        console.log("onpopstate");
-        console.log("event is: ", event)
     if (event.state && event.state.page) {
         loadContent(event.state.page, false);
     } else if (isFirefox  && firefoxHistory.length > 1) {

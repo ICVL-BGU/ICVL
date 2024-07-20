@@ -250,9 +250,6 @@ ul.public li a {
     text-decoration: none;
 }
 
-
-
-
 /* Research Grid */
 .research-grid {
     display: grid;
@@ -284,4 +281,13 @@ ul.public li a {
 .research-item p {
     margin: 10px 0 0;
     font-size: 1.1em;
+}
+
+/*grad positions*/
+.grad-positions a, .senior-projects a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.grad-positions a:hover, .senior-projects a:hover{
+    text-decoration: underline;
 }

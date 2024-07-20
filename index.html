@@ -19,24 +19,26 @@
                 <img src="assets/logo_icvl.png" alt="ICVL Logo">
             </a>
         </div>
+        <div>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
             <ul id="nav-list">
-                <li><a href="#" onclick="loadContent('pages/about.html')">About</a></li>
-                <li><a href="#" onclick="loadContent('pages/members.html')">Members</a></li>
-                <li><a href="#" onclick="loadContent('pages/research.html')">Research</a></li>
-                <li><a href="#" onclick="loadContent('pages/publications.html')">Publications</a></li>
-                <li><a href="#" onclick="loadContent('pages/seminar.html')">Seminar</a></li>
-                <li><a href="#" onclick="loadContent('pages/gallery.html')">Gallery</a></li>
-                <li><a href="#" onclick="loadContent('pages/resources.html')">Resources</a></li>
-                <li><a href="#" onclick="loadContent('pages/grad-positions.html')">Grad Positions</a></li>
-                <li><a href="#" onclick="loadContent('pages/senior-projects.html')">Senior Projects</a></li>
+                <li><a href="#" onclick="loadContent('pages/about.html'); closeMenu()">About</a></li>
+                <li><a href="#" onclick="loadContent('pages/members.html'); closeMenu()">Members</a></li>
+                <li><a href="#" onclick="loadContent('pages/research.html'); closeMenu()">Research</a></li>
+                <li><a href="#" onclick="loadContent('pages/publications.html'); closeMenu()">Publications</a></li>
+                <li><a href="#" onclick="loadContent('pages/seminar.html'); closeMenu()">Seminar</a></li>
+                <li><a href="#" onclick="loadContent('pages/gallery.html'); closeMenu()">Gallery</a></li>
+                <li><a href="#" onclick="loadContent('pages/resources.html'); closeMenu()">Resources</a></li>
+                <li><a href="#" onclick="loadContent('pages/grad-positions.html'); closeMenu()">Grad Positions</a></li>
+                <li><a href="#" onclick="loadContent('pages/senior-projects.html'); closeMenu()">Senior Projects</a></li>
             </ul>
         </nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </div>
     </header>
     <div class="main-container">
         <main id="content">

@@ -9,7 +9,7 @@ window.onload = function () {
 };
 
 function loadContent(page, addToHistory = true) {
-
+    closeMenu();
     var xhr = new XMLHttpRequest();
     xhr.open('GET', page, true);
     xhr.onreadystatechange = function () {
@@ -32,14 +32,13 @@ function loadContent(page, addToHistory = true) {
 window.onpopstate = function (event) {
     if (event.state && event.state.page) {
         loadContent(event.state.page, false);
-    } else if (isFirefox  && firefoxHistory.length > 1) {
+    } else if (isFirefox && firefoxHistory.length > 1) {
         // Handle Firefox initial popstate with null state
         firefoxHistory.pop(); // Remove the current state
         const lastState = firefoxHistory[firefoxHistory.length - 1]; // Get the previous state
         loadContent(lastState.page, false);
     }
 };
-
 
 function adjustPadding() {
     var header = document.querySelector('header');
@@ -67,7 +66,18 @@ checkInitialState();
 
 function toggleMenu() {
     const navList = document.getElementById('nav-list');
-    navList.classList.toggle('active');
+    const menuIcon = document.querySelector('.menu-icon');
+    if (navList.classList.contains('active')) {
+        navList.style.maxHeight = '0';
+        navList.style.opacity = '0';
+        navList.classList.remove('active')
+        menuIcon.classList.remove('open');
+    } else {
+        navList.classList.add('active');
+        navList.style.maxHeight = '1000px';
+        navList.style.opacity = '1';
+        menuIcon.classList.add('open');
+    }
 }
 
 let slideIndex = 1;
@@ -116,4 +126,16 @@ function startAutoSlide() {
 function resetAutoSlide() {
     clearInterval(slideInterval);
     startAutoSlide();
+}
+
+// close the hamburger menu after clicking links
+function closeMenu() {
+    const navList = document.getElementById('nav-list');
+    const menuIcon = document.querySelector('.menu-icon');
+    if (navList.classList.contains('active')) {
+        navList.style.maxHeight = '0';
+        navList.style.opacity = '0';
+        navList.classList.remove('active');
+        menuIcon.classList.remove('open');
+    }
 }

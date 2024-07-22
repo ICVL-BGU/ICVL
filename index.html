@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/seminar.css">
-    <link rel="stylesheet" href="css/research.css">
-    <link rel="stylesheet" href="css/resources.css">
 </head>
 <body>
     <header>
@@ -20,24 +17,25 @@
             </a>
         </div>
         <div>
-        <nav>
-            <ul id="nav-list">
-                <li><a href="#" onclick="loadContent('pages/about.html'); closeMenu()">About</a></li>
-                <li><a href="#" onclick="loadContent('pages/members.html'); closeMenu()">Members</a></li>
-                <li><a href="#" onclick="loadContent('pages/research.html'); closeMenu()">Research</a></li>
-                <li><a href="#" onclick="loadContent('pages/publications.html'); closeMenu()">Publications</a></li>
-                <li><a href="#" onclick="loadContent('pages/seminar.html'); closeMenu()">Seminar</a></li>
-                <li><a href="#" onclick="loadContent('pages/gallery.html'); closeMenu()">Gallery</a></li>
-                <li><a href="#" onclick="loadContent('pages/resources.html'); closeMenu()">Resources</a></li>
-                <li><a href="#" onclick="loadContent('pages/grad-positions.html'); closeMenu()">Grad Positions</a></li>
-                <li><a href="#" onclick="loadContent('pages/senior-projects.html'); closeMenu()">Senior Projects</a></li>
-            </ul>
-        </nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#" onclick="loadContent('pages/about.html'); closeMenu()">About</a></li>
+                    <li><a href="#" onclick="loadContent('pages/members.html'); closeMenu()">Members</a></li>
+                    <li><a href="#" onclick="loadContent('pages/research.html'); closeMenu()">Research</a></li>
+                    <li><a href="#" onclick="loadContent('pages/publications.html'); closeMenu()">Publications</a></li>
+                    <li><a href="#" onclick="loadContent('pages/seminar.html'); closeMenu()">Seminar</a></li>
+                    <li><a href="#" onclick="loadContent('pages/gallery.html'); closeMenu()">Gallery</a></li>
+                    <li><a href="#" onclick="loadContent('pages/resources.html'); closeMenu()">Resources</a></li>
+                    <li><a href="#" onclick="loadContent('pages/grad-positions.html'); closeMenu()">Grad Positions</a></li>
+                    <li><a href="#" onclick="loadContent('pages/senior-projects.html'); closeMenu()">Senior Projects</a></li>
+                    <li><a href="#" id="theme-toggle" onclick="toggleTheme()">Dark Mode</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </header>
     <div class="main-container">

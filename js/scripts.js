@@ -139,3 +139,45 @@ function closeMenu() {
         menuIcon.classList.remove('open');
     }
 }
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const themeToggle = document.getElementById('theme-toggle');
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.textContent = 'Dark Mode';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.textContent = 'Light Mode';
+    }
+}
+
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
+const themeToggle = document.getElementById('theme-toggle');
+
+// If there's a saved theme, use it
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+} else {
+    // Otherwise, use the system preference
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (systemPrefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggle.textContent = 'Dark Mode';
+    }
+}
+
+// Listen for system color scheme changes and update theme accordingly
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const newColorScheme = e.matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newColorScheme);
+    localStorage.setItem('theme', newColorScheme);
+    themeToggle.textContent = newColorScheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+});

@@ -1,6 +1,38 @@
+/* Dark Mode CSS Variables */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background-color: #1a1a1a;
+    --footer-background-color: #1a1a1a;
+    --link-color: #ffffff;
+    --hover-background-color: #ff5722;
+    --hover-text-color: #ffffff;
+    --container-background-color: #f5f5f5;
+    --container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease; /* Add transition for theme change */
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-background-color: #333333;
+    --footer-background-color: #333333;
+    --link-color: #1e90ff;
+    --hover-background-color: #ff3300;
+    --hover-text-color: #ffffff;
+    --container-background-color: #1e1e1e;
+    transition: all 0.5s ease; /* Add transition for theme change */
+}
+
+/* Apply CSS Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
 /* Header */
 header {
-    background-color: #1a1a1a;
+    background-color: var(--header-background-color);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -45,10 +77,12 @@ nav ul {
 
 nav ul li {
     margin: 10px 15px;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -56,9 +90,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff5722;
-    color: #fff;
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
     border-radius: 4px;
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.1s, color 0.1s;
+    border-radius: 4px;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#theme-toggle:hover {
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
 }
 
 /* Hamburger Menu Icon */
@@ -72,7 +122,7 @@ nav ul li a:hover {
 .menu-icon .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--link-color);
     margin: 4px 0;
 }
 
@@ -80,8 +130,8 @@ nav ul li a:hover {
 .main-container {
     width: 80%;
     margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-background-color);
+    box-shadow: var(--container-box-shadow);
     padding: 20px;
     border-radius: 8px;
 }
@@ -92,10 +142,10 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
     margin-top: 20px;
-    border-top: 4px solid #ff5722;
+    border-top: 4px solid var(--hover-background-color);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -112,6 +162,10 @@ footer p {
 .content {
     display: block;
     padding: 20px;
+    background-color: var(--container-background-color);
+    box-shadow: var(--container-box-shadow);
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .about-section {
@@ -126,8 +180,7 @@ footer p {
     border: 1px solid #416488;
 }
 
-
-/* members.css */
+/* Members Section */
 #primary {
     padding: 20px;
 }
@@ -153,12 +206,13 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--container-background-color);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     width: 200px;
     text-align: center;
+    box-shadow: var(--container-box-shadow);
 }
 
 .student_box_img img, .student_box_alumni img {
@@ -170,7 +224,7 @@ footer p {
 .member-name {
     font-weight: bold;
     font-size: 1.2em;
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     margin-top: 10px;
 }
@@ -185,23 +239,22 @@ footer p {
 
 /* Additional styles to match theme */
 .page-title {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-color);
+    color: var(--background-color);
     padding: 10px 20px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .member_container h2 {
-    color: #333;
+    color: var(--text-color);
     font-size: 1.8em;
     margin-top: 20px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--text-color);
     padding-bottom: 5px;
 }
 
-
-/*publication properties */
+/* Publication Properties */
 .publication-year {
     margin-bottom: 2rem;
 }
@@ -249,7 +302,117 @@ ul.public li a {
     text-decoration: none;
 }
 
-/* Research Grid */
+/* Research Section */
+/* General research section styling */
+.research-section {
+    background-color: var(--container-background-color); /* Support dark mode */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--container-box-shadow); /* Support dark mode */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Flex behavior for sections with multiple items */
+.research-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* General styling for images within research sections */
+.research-section img {
+    max-width: 100%; /* Allow images to scale with the container */
+    height: auto;
+    border-radius: 4px; /* Tiny border radius */
+    display: block;
+    margin: 0 auto 20px; /* Center images and add bottom margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* General styling for videos within research sections */
+.research-section video, .research-section iframe {
+    width: 100%;
+    max-width: 560px; /* Maintain a max-width for better appearance */
+    border-radius: 8px;
+    margin: 20px auto; /* Center the video and add top and bottom margin */
+    display: block;
+}
+
+/* Specific styling for images in image groups */
+.research-section .image-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between images */
+    justify-content: center;
+}
+
+.research-section .image-group figure {
+    flex: 1; /* Allow figures to grow and shrink */
+    text-align: center; /* Center align the figcaption text */
+}
+
+.research-section .image-group img {
+    width: 100%; /* Allow images to scale with their container */
+    max-width: 500px; /* Ensure images do not take more than 50% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure images fit within the set dimensions without distortion */
+    border: 2px solid #ccc; /* Optional: add a border around images */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better appearance */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.research-section .image-group img:hover {
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
+}
+
+.research-section .image-group figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: var(--text-color); /* Support dark mode */
+    text-align: center; /* Ensure text is centered under each image */
+    max-width: 200px; /* Ensure the text width matches the image width */
+    overflow-wrap: break-word; /* Wrap text to avoid overflow */
+}
+
+/* Specific link styling for research sections */
+.research-section a {
+    text-decoration: underline;
+}
+
+/* Grid layout for inline demos */
+.inline-demos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.inline-demos .demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inline-demos iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: var(--container-box-shadow); /* Support dark mode */
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {
+    .inline-demos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional styling for research grid */
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -258,12 +421,13 @@ ul.public li a {
 }
 
 .research-item {
-    background: #faf7f7;
+    background: var(--container-background-color); /* Support dark mode */
     border-radius: 8px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     transition: transform 0.2s;
     box-sizing: border-box;
+    box-shadow: var(--container-box-shadow); /* Support dark mode */
 }
 
 .research-item:hover {
@@ -272,21 +436,113 @@ ul.public li a {
 
 .research-item img {
     border-radius: 8px;
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    width: 100%; /* Ensure images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fit within the set dimensions without distortion */
+    margin-bottom: 10px; /* Add spacing below images */
 }
 
 .research-item p {
     margin: 10px 0 0;
     font-size: 1.1em;
+    color: var(--text-color); /* Support dark mode */
 }
 
-/*grad positions*/
-.grad-positions a, .senior-projects a {
-    color: #007BFF;
-    text-decoration: none;
+/* Seminars Section */
+.year-group {
+    margin-bottom: 20px;
 }
-.grad-positions a:hover, .senior-projects a:hover{
-    text-decoration: underline;
+
+.year-header {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff6600;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.year-group h2:hover {
+    color: #ff3300; /* Change color on hover */
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+.year-meetings {
+    display: none;
+}
+
+.year-meetings.active {
+    display: block;
+}
+
+.meeting {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--container-background-color);
+    color: var(--text-color);
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: var(--container-box-shadow);
+}
+
+.date, .group, .title, .abstract {
+    margin: 0;
+}
+
+.meeting-title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #416488;
+}
+
+.abstract {
+    display: none;
+    padding-top: 10px;
+}
+
+.abstract.active {
+    display: block;
+}
+
+/* Resources Section */
+.resource-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.link-box {
+    background-color: var(--container-background-color);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: var(--container-box-shadow);
+    transition: transform 0.2s;
+}
+
+.link-box:hover {
+    transform: scale(1.05);
+}
+
+.link-box a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.link-box img {
+    margin-right: 10px;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.font_norm {
+    font-weight: normal;
 }

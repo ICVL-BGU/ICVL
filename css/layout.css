@@ -312,15 +312,12 @@ ul.public li a {
     margin-bottom: 20px;
     font-size: 1.1em;
     line-height: 1.8;
-}
-
-/* Flex behavior for sections with multiple items */
-.research-section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 
 /* General styling for images within research sections */
 .research-section img {
@@ -343,8 +340,8 @@ ul.public li a {
 
 /* Specific styling for images in image groups */
 .research-section .image-group {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px; /* Space between images */
     justify-content: center;
 }
@@ -356,7 +353,6 @@ ul.public li a {
 
 .research-section .image-group img {
     width: 100%; /* Allow images to scale with their container */
-    max-width: 500px; /* Ensure images do not take more than 50% of the container's width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure images fit within the set dimensions without distortion */
     border: 2px solid #ccc; /* Optional: add a border around images */
@@ -364,7 +360,6 @@ ul.public li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better appearance */
     transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
-
 
 .research-section .image-group figcaption {
     margin-top: 8px;

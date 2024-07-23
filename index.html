@@ -28,7 +28,15 @@
                     <li><a href="#" onclick="loadContent('pages/resources.html'); closeMenu()">Resources</a></li>
                     <li><a href="#" onclick="loadContent('pages/grad-positions.html'); closeMenu()">Grad Positions</a></li>
                     <li><a href="#" onclick="loadContent('pages/senior-projects.html'); closeMenu()">Senior Projects</a></li>
-                    <li><a href="#" id="theme-toggle" onclick="toggleTheme()">Dark Mode</a></li>
+                    <li>
+                        <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                            <div class="toggle-switch">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                                <div class="toggle-circle"></div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="menu-icon" onclick="toggleMenu()">

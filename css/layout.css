@@ -9,6 +9,7 @@
     --hover-text-color: #ffffff;
     --container-background-color: #f5f5f5;
     --container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --theme-toggle-text-color: white;
     transition: all 0.5s ease; /* Add transition for theme change */
 }
 
@@ -21,6 +22,7 @@
     --hover-background-color: #ff3300;
     --hover-text-color: #ffffff;
     --container-background-color: #1e1e1e;
+    --theme-toggle-text-color: #1e90ff;
     transition: all 0.5s ease; /* Add transition for theme change */
 }
 
@@ -96,20 +98,70 @@ nav ul li a:hover {
 }
 
 /* Dark mode toggle button */
-#theme-toggle {
+.theme-toggle {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: background-color 0.1s, color 0.1s;
-    border-radius: 4px;
-    color: var(--link-color);
-    text-decoration: none;
+    margin-left: 10px; /* Optional: Adjust the spacing as needed */
 }
 
-#theme-toggle:hover {
-    background-color: var(--hover-background-color);
-    color: var(--hover-text-color);
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    background-color: #e8e8b1;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transition: background-color 0.3s;
 }
+
+.toggle-switch i {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-switch .fa-sun {
+    color: #f39c12;
+}
+
+.toggle-switch .fa-moon {
+    color: #ddddb7;
+}
+
+.toggle-switch.active {
+    background-color: #34495e;
+}
+
+.toggle-switch.active .fa-sun {
+    color: #ddddb7;
+}
+
+.toggle-switch.active .fa-moon {
+    color: #f1c40f;
+}
+
+.toggle-circle {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 0.3s;
+}
+
+.toggle-switch.active .toggle-circle {
+    left: 33px;
+}
+
+
 
 /* Hamburger Menu Icon */
 .menu-icon {
@@ -312,7 +364,6 @@ ul.public li a {
     margin-bottom: 20px;
     font-size: 1.1em;
     line-height: 1.8;
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;

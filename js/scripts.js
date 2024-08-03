@@ -140,23 +140,6 @@ function closeMenu() {
     }
 }
 
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const themeToggle = document.getElementById('theme-toggle');
-    const toggleText = document.getElementById('toggle-text');
-    const toggleSwitch = themeToggle.querySelector('.toggle-switch');
-    if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        toggleText.textContent = 'Light';
-        toggleSwitch.classList.remove('active');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        toggleText.textContent = 'Dark';
-        toggleSwitch.classList.add('active');
-    }
-}
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');

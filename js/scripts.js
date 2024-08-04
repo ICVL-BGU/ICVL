@@ -1,45 +1,3 @@
-let firefoxHistory = [];
-let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
-window.onload = function () {
-    console.log("window.onload");
-    loadContent('pages/home.html', true);
-    // history.replaceState({ page: 'pages/home.html' }, "");
-    // firefoxHistory.push({ page: 'pages/home.html' });
-};
-
-function loadContent(page, addToHistory = true) {
-    closeMenu();
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', page, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('content').innerHTML = xhr.responseText;
-
-            if (addToHistory) {
-                history.pushState({ page: page }, "");
-                firefoxHistory.push({ page: page });
-            }
-
-            if (page === 'pages/seminar.html') {
-                loadSeminars();
-            }
-        }
-    };
-    xhr.send();
-}
-
-window.onpopstate = function (event) {
-    if (event.state && event.state.page) {
-        loadContent(event.state.page, false);
-    } else if (isFirefox && firefoxHistory.length > 1) {
-        // Handle Firefox initial popstate with null state
-        firefoxHistory.pop(); // Remove the current state
-        const lastState = firefoxHistory[firefoxHistory.length - 1]; // Get the previous state
-        loadContent(lastState.page, false);
-    }
-};
-
 function adjustPadding() {
     var header = document.querySelector('header');
     var mainContainer = document.querySelector('.main-container');
@@ -140,23 +98,6 @@ function closeMenu() {
     }
 }
 
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const themeToggle = document.getElementById('theme-toggle');
-    const toggleText = document.getElementById('toggle-text');
-    const toggleSwitch = themeToggle.querySelector('.toggle-switch');
-    if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        toggleText.textContent = 'Light';
-        toggleSwitch.classList.remove('active');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        toggleText.textContent = 'Dark';
-        toggleSwitch.classList.add('active');
-    }
-}
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');

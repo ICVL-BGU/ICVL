@@ -3,69 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICVL Website</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>ICVL</title>
+    <base href="/ICVL/">
+    <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="#" onclick="loadContent('pages/home.html')">
-                <img src="assets/logo_icvl.png" alt="ICVL Logo">
-            </a>
-        </div>
-        <div>
-            <nav>
-                <ul id="nav-list">
-                    <li><a href="#" onclick="loadContent('pages/about.html'); closeMenu()">About</a></li>
-                    <li><a href="#" onclick="loadContent('pages/members.html'); closeMenu()">Members</a></li>
-                    <li><a href="#" onclick="loadContent('pages/research.html'); closeMenu()">Research</a></li>
-                    <li><a href="#" onclick="loadContent('pages/publications.html'); closeMenu()">Publications</a></li>
-                    <li><a href="#" onclick="loadContent('pages/seminar.html'); closeMenu()">Seminar</a></li>
-                    <li><a href="#" onclick="loadContent('pages/gallery.html'); closeMenu()">Gallery</a></li>
-                    <li><a href="#" onclick="loadContent('pages/resources.html'); closeMenu()">Resources</a></li>
-                    <li><a href="#" onclick="loadContent('pages/grad-positions.html'); closeMenu()">Grad Positions</a></li>
-                    <li><a href="#" onclick="loadContent('pages/senior-projects.html'); closeMenu()">Senior Projects</a></li>
-                    <li>
-                        <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
-                            <div class="toggle-switch">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                                <div class="toggle-circle"></div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
     <div class="main-container">
+
         <main id="content">
-        </main>
+        <section class="slider">
+            <div class="slides">
+                <div class="slide active-slide">
+                    <img src="./assets/home/owl-2.jpg" alt="Owl Image">
+                    <div class="caption">HUMAN AND BIOLOGICAL PERCEPTION</div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/home/ball1.jpg" alt="Ball Image">
+                    <div class="caption">COMPUTATIONAL AND MACHINE VISION</div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/home/tngtbndl.png" alt="Graph Image">
+                    <div class="caption">COMPUTATIONAL VISUAL NEUROSCIENCE</div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                <span class="next" onclick="plusSlides(1)">&#10095;</span>
+            </div>
+        </section>
+        <section class="content">
+            <div class="description">
+                <h2>The Interdisciplinary Computational Vision Lab</h2>
+                <p>The Interdisciplinary Computational Vision Lab was founded in 2006 as one of the core labs in the Computer Science department at Ben-Gurion University. Loyal to its name, the lab is an interdisciplinary facility where research focuses on computational vision but at the same time spans various aspects of vision sciences, including theoretical computer vision, human perception and visual psychophysics, visual neuroscience, and applied machine vision. Our goal is to contribute to the understanding of biological (and in particular, human) vision and at the same time explore its theoretical foundations and practical applications to machine vision.</p>
+                <p>We are always looking for excellent graduate students to join the lab. If any of the vision sciences catches your imagination and research is your passion, please do contact us to tell us about yourself and learn more about the lab and its research.</p>
+            </div>
+        </section>
+    </main>
     </div>
-    <footer>
-        <div class="contact-info">
-            <p>Phones: +972-8-647-7818/9</p>
-            <p>Fax: +972-8-647-7975</p>
-            <p>Email: ICVL@cs.bgu.ac.il</p>
-            <p>Director: Prof. Ohad Ben-Shahar</p>
-            <p>Seminar Coordinator: Ilan Git</p>
-        </div>
-        <div class="address">
-            <p>Address: The interdisciplinary Computational Vision Laboratory (ICVL), Computer Science Department, Ben-Gurion University, P.O.Box 653, Beer-Sheva 84105, Israel</p>
-            <p>Location: BGU Campus, Building 37, Lab -103 (one floor below ground level)</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/seminar.js"></script>
-    <script src="js/publications.js"></script>
+    <div id="footer-placeholder"></div>
+    <script src="js/loadContent.js"></script>
 </body>
 </html>

@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
     scripts.forEach(function(src) {
         const script = document.createElement('script');
         script.src = src;
+        script.onload = function() {
+            if (src.includes('seminar.js')) {
+                loadSeminars();
+            }
+        };
         document.body.appendChild(script);
     });
 
@@ -42,4 +47,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-

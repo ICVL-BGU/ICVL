@@ -1,31 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Load the header
-    fetch('/pages/header.html')
+    fetch('/ICVL/pages/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
+            checkTheme();
         });
 
     // Load the footer
-    fetch('/pages/footer.html')
+    fetch('/ICVL/pages/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 
-    // Load the includes (CSS)
-    fetch('/css/include_css.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('css-placeholder').innerHTML = data;
-        });
-
     // Load the JavaScript files
     const scripts = [
         'https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js',
-        '/js/scripts.js',
-        '/js/seminar.js',
-        '/js/publications.js'
+        '/ICVL/js/scripts.js',
+        '/ICVL/js/seminar.js',
+        '/ICVL/js/publications.js'
     ];
 
     scripts.forEach(function(src) {
@@ -33,4 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
         script.src = src;
         document.body.appendChild(script);
     });
+
+    function checkTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            const toggleSwitch = themeToggle.querySelector('.toggle-switch');
+            if (savedTheme === 'dark') {
+                toggleSwitch.classList.add('active');
+            } else {
+                toggleSwitch.classList.remove('active');
+            }
+        }
+    }
 });
+

@@ -32,7 +32,6 @@ body {
     color: var(--text-color);
 }
 
-/* Header */
 header {
     background-color: var(--header-background-color);
     padding: 10px 20px;
@@ -42,7 +41,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transition: all 0.1s ease-out; /* Reduce transition duration */
+    transition: all 0.1s ease-out;
 }
 
 header.fixed {
@@ -54,14 +53,13 @@ header.fixed {
 
 header .logo img {
     width: 200px;
-    transition: width 0.1s ease-out; /* Reduce transition duration */
+    transition: width 0.1s ease-out;
 }
 
 header.fixed .logo img {
-    width: 50px; /* Adjust the size as needed */
+    width: 50px;
 }
 
-/* Navigation */
 nav {
     display: flex;
     align-items: center;
@@ -81,6 +79,7 @@ nav ul li {
     margin: 10px 15px;
     display: flex;
     align-items: center;
+    transition: margin 0.1s ease-out;
 }
 
 nav ul li a {
@@ -88,7 +87,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    transition: background-color 0.1s, color 0.1s; /* Reduce transition duration */
+    transition: background-color 0.1s, color 0.1s;
 }
 
 nav ul li a:hover {
@@ -96,6 +95,20 @@ nav ul li a:hover {
     color: var(--hover-text-color);
     border-radius: 4px;
 }
+
+/* Theme toggle button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    transition: opacity 0.3s;
+}
+
 
 /* Dark mode toggle button */
 .theme-toggle {

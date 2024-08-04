@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function checkTheme() {
         const savedTheme = localStorage.getItem('theme') || 'light';
+        if (!savedTheme) {
+            return
+        }
+
         document.documentElement.setAttribute('data-theme', savedTheme);
         const themeToggle = document.getElementById('theme-toggle');
         if (themeToggle) {

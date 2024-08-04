@@ -2,21 +2,48 @@ function adjustPadding() {
     var header = document.querySelector('header');
     var mainContainer = document.querySelector('.main-container');
     if (window.scrollY > 0 && window.innerWidth >= 1200) {
-        var headerHeight = header.offsetHeight;
+        let headerHeight = header.offsetHeight;
         mainContainer.style.paddingTop = headerHeight + 'px';
         header.classList.add('fixed');
-    } else {
+    } else if (header!== null){
         mainContainer.style.paddingTop = '20px'; // Reset to original padding
         header.classList.remove('fixed');
     }
 }
+function adjustMenu() {
+    let navList = document.getElementById('nav-list');
+    if(!navList){
+        return
+    }
+    let menuItems = navList.querySelectorAll('li');
+    let baseFontSize = 16;
+    let basePaddingTopBottom = 10;
+    let basePaddingLeftRight = 20;
+
+    if (window.innerWidth < 1620 && window.innerWidth > 768) {
+        let decreaseFactor = Math.floor((1620 - window.innerWidth) / 100);
+        menuItems.forEach(function(item) {
+            let link = item.querySelector('a');
+            link.style.fontSize = Math.max((baseFontSize - decreaseFactor),12) + 'px';
+            link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+            item.style.margin = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+        });
+    } else {
+        menuItems.forEach(function(item) {
+            let link = item.querySelector('a');
+            link.style.fontSize = baseFontSize + 'px';
+            link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+        });
+    }
+}
 
 // Add event listener for scroll and resize events
-window.addEventListener('scroll', adjustPadding);
-window.addEventListener('resize', adjustPadding);
+window.addEventListener('scroll',adjustPadding );
+window.addEventListener('resize', adjustMenu);
 
 // Ensure the header is fixed or not on initial load
 function checkInitialState() {
+    adjustMenu()
     adjustPadding();
 }
 

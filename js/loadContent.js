@@ -32,11 +32,3 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(script);
     });
 });
-
-
-// Listen for system color scheme changes and update theme accordingly
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    const newColorScheme = e.matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newColorScheme);
-    localStorage.setItem('theme', newColorScheme);
-});

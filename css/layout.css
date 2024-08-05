@@ -10,6 +10,7 @@
     --container-background-color: #f5f5f5;
     --container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     --theme-toggle-text-color: white;
+    --link-color-grad-senior:  #ff5722;
     transition: all 0.5s ease; /* Add transition for theme change */
 }
 
@@ -19,6 +20,7 @@
     --header-background-color: #333333;
     --footer-background-color: #333333;
     --link-color: #1e90ff;
+    --link-color-grad-senior: #1e90ff;
     --hover-background-color: #ff3300;
     --hover-text-color: #ffffff;
     --container-background-color: #1e1e1e;
@@ -306,7 +308,6 @@ ul.public li a {
     background-color: var(--container-background-color); /* Support dark mode */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: var(--container-box-shadow); /* Support dark mode */
     margin-bottom: 20px;
     font-size: 1.1em;
     line-height: 1.8;
@@ -533,4 +534,8 @@ ul.public li a {
 
 .font_norm {
     font-weight: normal;
+}
+
+.grad-positions a,.senior-projects a{
+    color: var(--link-color-grad-senior);
 }

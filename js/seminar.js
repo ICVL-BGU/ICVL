@@ -56,8 +56,6 @@ function loadSeminars() {
                         abstractElement.classList.toggle('active');
                     });
                 });
-            } else {
-                console.error('Meeting container not found');
             }
         })
         .catch(error => console.error('Error fetching the seminar data:', error));

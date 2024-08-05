@@ -1,7 +1,7 @@
 function adjustPadding() {
     var header = document.querySelector('header');
     var mainContainer = document.querySelector('.main-container');
-    if (window.scrollY > 0 && window.innerWidth >= 1200) {
+    if (window.scrollY > 0 ) {
         let headerHeight = header.offsetHeight;
         mainContainer.style.paddingTop = headerHeight + 'px';
         header.classList.add('fixed');
@@ -12,9 +12,7 @@ function adjustPadding() {
 }
 function adjustMenu() {
     let navList = document.getElementById('nav-list');
-    if(!navList){
-        return
-    }
+    if (navList == null) {return;}
     let menuItems = navList.querySelectorAll('li');
     let baseFontSize = 16;
     let basePaddingTopBottom = 10;
@@ -24,9 +22,12 @@ function adjustMenu() {
         let decreaseFactor = Math.floor((1620 - window.innerWidth) / 100);
         menuItems.forEach(function(item) {
             let link = item.querySelector('a');
+            if(link===null){
+                return;
+            }
             link.style.fontSize = Math.max((baseFontSize - decreaseFactor),12) + 'px';
             link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
-            item.style.margin = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+            item.style.margin = (basePaddingTopBottom - decreaseFactor-6) + 'px ' + (basePaddingLeftRight - decreaseFactor-6) + 'px';
         });
     } else {
         menuItems.forEach(function(item) {
@@ -37,17 +38,35 @@ function adjustMenu() {
     }
 }
 
+
+
+    // Observe changes in the DOM
+    const observer = new MutationObserver(function(mutationsList, observer) {
+        for (let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                let navList = document.getElementById('nav-list');
+                if (navList) {
+                    checkInitialState()
+                    observer.disconnect(); // Stop observing after the element is found
+                    break;
+                }
+            }
+        }
+    });
+
+    // Start observing the document body for added nodes
+    observer.observe(document.body, { childList: true, subtree: true });
+
+
 // Add event listener for scroll and resize events
 window.addEventListener('scroll',adjustPadding );
 window.addEventListener('resize', adjustMenu);
 
-// Ensure the header is fixed or not on initial load
 function checkInitialState() {
     adjustMenu()
     adjustPadding();
 }
 
-checkInitialState();
 
 function toggleMenu() {
     const navList = document.getElementById('nav-list');
@@ -114,8 +133,25 @@ function resetAutoSlide() {
 }
 
 
+function toggleThemeIcon(){
+    const darkIcon = document.getElementById('dark-icon');
+    const lightIcon = document.getElementById('light-icon');
+
+    if (darkIcon.style.display === 'block') {
+        // If darkIcon is visible, hide it and show lightIcon
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'block';
+    } else {
+        // If darkIcon is not visible, show it and hide lightIcon
+        darkIcon.style.display = 'block';
+        lightIcon.style.display = 'none';
+    }
+}
+
+
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
+
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
@@ -123,6 +159,7 @@ function toggleTheme() {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
     }
+    toggleThemeIcon()
 }
 
 // Check for saved theme in localStorage

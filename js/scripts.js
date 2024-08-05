@@ -113,67 +113,30 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-// close the hamburger menu after clicking links
-function closeMenu() {
-    const navList = document.getElementById('nav-list');
-    const menuIcon = document.querySelector('.menu-icon');
-    if (navList.classList.contains('active')) {
-        navList.style.maxHeight = '0';
-        navList.style.opacity = '0';
-        navList.classList.remove('active');
-        menuIcon.classList.remove('open');
-    }
-}
-
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    const themeToggle = document.getElementById('theme-toggle');
-    const toggleSwitch = themeToggle.querySelector('.toggle-switch');
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        toggleSwitch.classList.remove('active');
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        toggleSwitch.classList.add('active');
     }
 }
 
 // Check for saved theme in localStorage
 const savedTheme = localStorage.getItem('theme');
-const themeToggle = document.getElementById('theme-toggle');
-const toggleSwitch = themeToggle.querySelector('.toggle-switch');
 
 // If there's a saved theme, use it
 if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-        toggleSwitch.classList.add('active');
-    } else {
-        toggleSwitch.classList.remove('active');
-    }
 } else {
     // Otherwise, use the system preference
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (systemPrefersDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.classList.add('active');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        toggleSwitch.classList.remove('active');
     }
 }
-
-// Listen for system color scheme changes and update theme accordingly
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    const newColorScheme = e.matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newColorScheme);
-    localStorage.setItem('theme', newColorScheme);
-    if (newColorScheme === 'dark') {
-        toggleSwitch.classList.add('active');
-    } else {
-        toggleSwitch.classList.remove('active');
-    }
-});

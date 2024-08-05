@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
-            checkTheme();
         });
 
     // Load the footer
@@ -32,22 +31,12 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         document.body.appendChild(script);
     });
+});
 
-    function checkTheme() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (!savedTheme) {
-            return
-        }
 
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            const toggleSwitch = themeToggle.querySelector('.toggle-switch');
-            if (savedTheme === 'dark') {
-                toggleSwitch.classList.add('active');
-            } else {
-                toggleSwitch.classList.remove('active');
-            }
-        }
-    }
+// Listen for system color scheme changes and update theme accordingly
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const newColorScheme = e.matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newColorScheme);
+    localStorage.setItem('theme', newColorScheme);
 });

@@ -218,6 +218,10 @@ footer p {
     text-align: center;
     box-shadow: var(--container-box-shadow);
 }
+.student_box:hover, .student_box_alumni:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 
 .student_box_img img, .student_box_alumni img {
     border-radius: 50%;

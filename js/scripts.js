@@ -1,26 +1,72 @@
 function adjustPadding() {
     var header = document.querySelector('header');
     var mainContainer = document.querySelector('.main-container');
-    if (window.scrollY > 0 && window.innerWidth >= 1200) {
-        var headerHeight = header.offsetHeight;
+    if (window.scrollY > 0 ) {
+        let headerHeight = header.offsetHeight;
         mainContainer.style.paddingTop = headerHeight + 'px';
         header.classList.add('fixed');
-    } else {
+    } else if (header!== null){
         mainContainer.style.paddingTop = '20px'; // Reset to original padding
         header.classList.remove('fixed');
     }
 }
+function adjustMenu() {
+    let navList = document.getElementById('nav-list');
+    if (navList == null) {return;}
+    let menuItems = navList.querySelectorAll('li');
+    let baseFontSize = 16;
+    let basePaddingTopBottom = 10;
+    let basePaddingLeftRight = 20;
+
+    if (window.innerWidth < 1620 && window.innerWidth > 768) {
+        let decreaseFactor = Math.floor((1620 - window.innerWidth) / 100);
+        menuItems.forEach(function(item) {
+            let link = item.querySelector('a');
+            if(link===null){
+                return;
+            }
+            link.style.fontSize = Math.max((baseFontSize - decreaseFactor),12) + 'px';
+            link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+            item.style.margin = (basePaddingTopBottom - decreaseFactor-6) + 'px ' + (basePaddingLeftRight - decreaseFactor-6) + 'px';
+        });
+    } else {
+        menuItems.forEach(function(item) {
+            let link = item.querySelector('a');
+            link.style.fontSize = baseFontSize + 'px';
+            link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+        });
+    }
+}
+
+
+
+    // Observe changes in the DOM
+    const observer = new MutationObserver(function(mutationsList, observer) {
+        for (let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                let navList = document.getElementById('nav-list');
+                if (navList) {
+                    checkInitialState()
+                    observer.disconnect(); // Stop observing after the element is found
+                    break;
+                }
+            }
+        }
+    });
+
+    // Start observing the document body for added nodes
+    observer.observe(document.body, { childList: true, subtree: true });
+
 
 // Add event listener for scroll and resize events
-window.addEventListener('scroll', adjustPadding);
-window.addEventListener('resize', adjustPadding);
+window.addEventListener('scroll',adjustPadding );
+window.addEventListener('resize', adjustMenu);
 
-// Ensure the header is fixed or not on initial load
 function checkInitialState() {
+    adjustMenu()
     adjustPadding();
 }
 
-checkInitialState();
 
 function toggleMenu() {
     const navList = document.getElementById('nav-list');
@@ -86,67 +132,48 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-// close the hamburger menu after clicking links
-function closeMenu() {
-    const navList = document.getElementById('nav-list');
-    const menuIcon = document.querySelector('.menu-icon');
-    if (navList.classList.contains('active')) {
-        navList.style.maxHeight = '0';
-        navList.style.opacity = '0';
-        navList.classList.remove('active');
-        menuIcon.classList.remove('open');
+
+function toggleThemeIcon(){
+    const darkIcon = document.getElementById('dark-icon');
+    const lightIcon = document.getElementById('light-icon');
+
+    if (darkIcon.style.display === 'block') {
+        // If darkIcon is visible, hide it and show lightIcon
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'block';
+    } else {
+        // If darkIcon is not visible, show it and hide lightIcon
+        darkIcon.style.display = 'block';
+        lightIcon.style.display = 'none';
     }
 }
 
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    const themeToggle = document.getElementById('theme-toggle');
-    const toggleSwitch = themeToggle.querySelector('.toggle-switch');
+
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        toggleSwitch.classList.remove('active');
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        toggleSwitch.classList.add('active');
     }
+    toggleThemeIcon()
 }
 
 // Check for saved theme in localStorage
 const savedTheme = localStorage.getItem('theme');
-const themeToggle = document.getElementById('theme-toggle');
-const toggleSwitch = themeToggle.querySelector('.toggle-switch');
 
 // If there's a saved theme, use it
 if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-        toggleSwitch.classList.add('active');
-    } else {
-        toggleSwitch.classList.remove('active');
-    }
 } else {
     // Otherwise, use the system preference
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (systemPrefersDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.classList.add('active');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        toggleSwitch.classList.remove('active');
     }
 }
-
-// Listen for system color scheme changes and update theme accordingly
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    const newColorScheme = e.matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newColorScheme);
-    localStorage.setItem('theme', newColorScheme);
-    if (newColorScheme === 'dark') {
-        toggleSwitch.classList.add('active');
-    } else {
-        toggleSwitch.classList.remove('active');
-    }
-});

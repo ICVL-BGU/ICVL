@@ -92,9 +92,6 @@
         margin-bottom: 20px;
     }
 
-    .slider {
-        padding-top: 75%; /* 4:3 Aspect Ratio for smaller screens */
-    }
 
     .caption {
         font-size: 16px;
@@ -144,12 +141,8 @@
         margin-bottom: 20px;
     }
 
-    .slider {
-        padding-top: 100%; /* 1:1 Aspect Ratio for very small screens */
-    }
-
     .caption {
-        font-size: 14px;
+        font-size: 10px;
         bottom: 5px;
         left: 5px;
         right: 5px;

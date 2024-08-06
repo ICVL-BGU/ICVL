@@ -36,8 +36,8 @@ body {
 
 header {
     background-color: var(--header-background-color);
-    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 3px 6px;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -54,12 +54,12 @@ header.fixed {
 }
 
 header .logo img {
-    width: 200px;
+    width: 120px;
     transition: width 0.1s ease-out;
 }
 
 header.fixed .logo img {
-    width: 50px;
+    width: 60px;
 }
 
 nav {
@@ -81,14 +81,12 @@ nav ul li {
     margin: 10px 15px;
     display: flex;
     align-items: center;
-    transition: margin 0.1s ease-out;
 }
 
 nav ul li a {
     color: var(--link-color);
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
+    padding: 3px 6px;
     transition: background-color 0.1s, color 0.1s;
 }
 
@@ -127,7 +125,7 @@ nav ul li a:hover {
 }
 
 #nav-list div {
-    padding: 0 15px;
+    padding: 0 6px;
 }
 
 /* Main Container */

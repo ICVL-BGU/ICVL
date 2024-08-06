@@ -10,60 +10,72 @@ function adjustPadding() {
         header.classList.remove('fixed');
     }
 }
-function adjustMenu() {
-    let navList = document.getElementById('nav-list');
-    if (navList == null) {return;}
-    let menuItems = navList.querySelectorAll('li');
-    let baseFontSize = 16;
-    let basePaddingTopBottom = 10;
-    let basePaddingLeftRight = 20;
+// function adjustMenu() {
+//     let navList = document.getElementById('nav-list');
+//     if (!navList) {
+//         return;
+//     }
+//
+//     let menuItems = navList.querySelectorAll('li');
+//     let baseFontSize = 16;
+//     let basePaddingTopBottom = 3;
+//     let basePaddingLeftRight = 6;
+//
+//     if (window.innerWidth < 1620 && window.innerWidth > 768) {
+//         let decreaseFactor = Math.floor((1620 - window.innerWidth) / 300);
+//         menuItems.forEach(function(item) {
+//             let link = item.querySelector('a');
+//             if (!link) {
+//                 return;
+//             }
+//             link.style.fontSize = Math.max((baseFontSize - decreaseFactor), 10) + 'px';
+//             link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+//             item.style.margin = (basePaddingTopBottom - decreaseFactor - 6) + 'px ' + (basePaddingLeftRight - decreaseFactor - 6) + 'px';
+//         });
+//         navList.style.maxHeight = '1';
+//         navList.style.opacity = '1';
+//     } else {
+//         menuItems.forEach(function(item) {
+//             let link = item.querySelector('a');
+//             if (!link) {
+//                 return;
+//             }
+//             link.style.fontSize = baseFontSize + 'px';
+//             link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+//             item.style.margin = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+//         });
+//     }
+// }
+//
+//
+//
+//
+//
+// // Observe changes in the DOM
+// const observer = new MutationObserver(function(mutationsList, observer) {
+//     for (let mutation of mutationsList) {
+//         if (mutation.type === 'childList') {
+//             let navList = document.getElementById('nav-list');
+//             if (navList) {
+//                 checkInitialState()
+//                 console.log("fadsfasdf")
+//                                     observer.disconnect(); // הפסק את ההתבוננות לאחר שהאלמנט נמצא
+//                     break;
+//             }
+//         }
+//     }
+// });
 
-    if (window.innerWidth < 1620 && window.innerWidth > 768) {
-        let decreaseFactor = Math.floor((1620 - window.innerWidth) / 100);
-        menuItems.forEach(function(item) {
-            let link = item.querySelector('a');
-            if(link===null){
-                return;
-            }
-            link.style.fontSize = Math.max((baseFontSize - decreaseFactor),12) + 'px';
-            link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
-            item.style.margin = (basePaddingTopBottom - decreaseFactor-6) + 'px ' + (basePaddingLeftRight - decreaseFactor-6) + 'px';
-        });
-    } else {
-        menuItems.forEach(function(item) {
-            let link = item.querySelector('a');
-            link.style.fontSize = baseFontSize + 'px';
-            link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
-        });
-    }
-}
-
-
-
-    // Observe changes in the DOM
-    const observer = new MutationObserver(function(mutationsList, observer) {
-        for (let mutation of mutationsList) {
-            if (mutation.type === 'childList') {
-                let navList = document.getElementById('nav-list');
-                if (navList) {
-                    checkInitialState()
-                    observer.disconnect(); // Stop observing after the element is found
-                    break;
-                }
-            }
-        }
-    });
-
-    // Start observing the document body for added nodes
-    observer.observe(document.body, { childList: true, subtree: true });
+// Start observing the document body for added nodes
+// observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Add event listener for scroll and resize events
 window.addEventListener('scroll',adjustPadding );
-window.addEventListener('resize', adjustMenu);
+// window.addEventListener('resize', adjustMenu);
 
 function checkInitialState() {
-    adjustMenu()
+    // adjustMenu()
     adjustPadding();
 }
 
@@ -133,22 +145,6 @@ function resetAutoSlide() {
 }
 
 
-function toggleThemeIcon(){
-    const darkIcon = document.getElementById('dark-icon');
-    const lightIcon = document.getElementById('light-icon');
-
-    if (darkIcon.style.display === 'block') {
-        // If darkIcon is visible, hide it and show lightIcon
-        darkIcon.style.display = 'none';
-        lightIcon.style.display = 'block';
-    } else {
-        // If darkIcon is not visible, show it and hide lightIcon
-        darkIcon.style.display = 'block';
-        lightIcon.style.display = 'none';
-    }
-}
-
-
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     console.log(currentTheme);
@@ -159,7 +155,20 @@ function toggleTheme() {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
     }
-    // toggleThemeIcon()
 }
 
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
 
+// If there's a saved theme, use it
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+} else {
+    // Otherwise, use the system preference
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (systemPrefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+}

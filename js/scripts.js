@@ -10,60 +10,72 @@ function adjustPadding() {
         header.classList.remove('fixed');
     }
 }
-function adjustMenu() {
-    let navList = document.getElementById('nav-list');
-    if (navList == null) {return;}
-    let menuItems = navList.querySelectorAll('li');
-    let baseFontSize = 16;
-    let basePaddingTopBottom = 10;
-    let basePaddingLeftRight = 20;
+// function adjustMenu() {
+//     let navList = document.getElementById('nav-list');
+//     if (!navList) {
+//         return;
+//     }
+//
+//     let menuItems = navList.querySelectorAll('li');
+//     let baseFontSize = 16;
+//     let basePaddingTopBottom = 3;
+//     let basePaddingLeftRight = 6;
+//
+//     if (window.innerWidth < 1620 && window.innerWidth > 768) {
+//         let decreaseFactor = Math.floor((1620 - window.innerWidth) / 300);
+//         menuItems.forEach(function(item) {
+//             let link = item.querySelector('a');
+//             if (!link) {
+//                 return;
+//             }
+//             link.style.fontSize = Math.max((baseFontSize - decreaseFactor), 10) + 'px';
+//             link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
+//             item.style.margin = (basePaddingTopBottom - decreaseFactor - 6) + 'px ' + (basePaddingLeftRight - decreaseFactor - 6) + 'px';
+//         });
+//         navList.style.maxHeight = '1';
+//         navList.style.opacity = '1';
+//     } else {
+//         menuItems.forEach(function(item) {
+//             let link = item.querySelector('a');
+//             if (!link) {
+//                 return;
+//             }
+//             link.style.fontSize = baseFontSize + 'px';
+//             link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+//             item.style.margin = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
+//         });
+//     }
+// }
+//
+//
+//
+//
+//
+// // Observe changes in the DOM
+// const observer = new MutationObserver(function(mutationsList, observer) {
+//     for (let mutation of mutationsList) {
+//         if (mutation.type === 'childList') {
+//             let navList = document.getElementById('nav-list');
+//             if (navList) {
+//                 checkInitialState()
+//                 console.log("fadsfasdf")
+//                                     observer.disconnect(); // הפסק את ההתבוננות לאחר שהאלמנט נמצא
+//                     break;
+//             }
+//         }
+//     }
+// });
 
-    if (window.innerWidth < 1620 && window.innerWidth > 768) {
-        let decreaseFactor = Math.floor((1620 - window.innerWidth) / 100);
-        menuItems.forEach(function(item) {
-            let link = item.querySelector('a');
-            if(link===null){
-                return;
-            }
-            link.style.fontSize = Math.max((baseFontSize - decreaseFactor),12) + 'px';
-            link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
-            item.style.margin = (basePaddingTopBottom - decreaseFactor-6) + 'px ' + (basePaddingLeftRight - decreaseFactor-6) + 'px';
-        });
-    } else {
-        menuItems.forEach(function(item) {
-            let link = item.querySelector('a');
-            link.style.fontSize = baseFontSize + 'px';
-            link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
-        });
-    }
-}
-
-
-
-    // Observe changes in the DOM
-    const observer = new MutationObserver(function(mutationsList, observer) {
-        for (let mutation of mutationsList) {
-            if (mutation.type === 'childList') {
-                let navList = document.getElementById('nav-list');
-                if (navList) {
-                    checkInitialState()
-                    observer.disconnect(); // Stop observing after the element is found
-                    break;
-                }
-            }
-        }
-    });
-
-    // Start observing the document body for added nodes
-    observer.observe(document.body, { childList: true, subtree: true });
+// Start observing the document body for added nodes
+// observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Add event listener for scroll and resize events
 window.addEventListener('scroll',adjustPadding );
-window.addEventListener('resize', adjustMenu);
+// window.addEventListener('resize', adjustMenu);
 
 function checkInitialState() {
-    adjustMenu()
+    // adjustMenu()
     adjustPadding();
 }
 

@@ -133,22 +133,6 @@ function resetAutoSlide() {
 }
 
 
-function toggleThemeIcon(){
-    const darkIcon = document.getElementById('dark-icon');
-    const lightIcon = document.getElementById('light-icon');
-
-    if (darkIcon.style.display === 'block') {
-        // If darkIcon is visible, hide it and show lightIcon
-        darkIcon.style.display = 'none';
-        lightIcon.style.display = 'block';
-    } else {
-        // If darkIcon is not visible, show it and hide lightIcon
-        darkIcon.style.display = 'block';
-        lightIcon.style.display = 'none';
-    }
-}
-
-
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     console.log(currentTheme);
@@ -159,7 +143,20 @@ function toggleTheme() {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
     }
-    // toggleThemeIcon()
 }
 
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
 
+// If there's a saved theme, use it
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+} else {
+    // Otherwise, use the system preference
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (systemPrefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+}

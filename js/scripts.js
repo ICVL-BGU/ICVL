@@ -1,6 +1,6 @@
 function adjustPadding() {
-    var header = document.querySelector('header');
-    var mainContainer = document.querySelector('.main-container');
+    let header = document.querySelector('header');
+    let mainContainer = document.querySelector('.main-container');
     if (window.scrollY > 0 ) {
         let headerHeight = header.offsetHeight;
         mainContainer.style.paddingTop = headerHeight + 'px';
@@ -10,74 +10,7 @@ function adjustPadding() {
         header.classList.remove('fixed');
     }
 }
-// function adjustMenu() {
-//     let navList = document.getElementById('nav-list');
-//     if (!navList) {
-//         return;
-//     }
-//
-//     let menuItems = navList.querySelectorAll('li');
-//     let baseFontSize = 16;
-//     let basePaddingTopBottom = 3;
-//     let basePaddingLeftRight = 6;
-//
-//     if (window.innerWidth < 1620 && window.innerWidth > 768) {
-//         let decreaseFactor = Math.floor((1620 - window.innerWidth) / 300);
-//         menuItems.forEach(function(item) {
-//             let link = item.querySelector('a');
-//             if (!link) {
-//                 return;
-//             }
-//             link.style.fontSize = Math.max((baseFontSize - decreaseFactor), 10) + 'px';
-//             link.style.padding = (basePaddingTopBottom - decreaseFactor) + 'px ' + (basePaddingLeftRight - decreaseFactor) + 'px';
-//             item.style.margin = (basePaddingTopBottom - decreaseFactor - 6) + 'px ' + (basePaddingLeftRight - decreaseFactor - 6) + 'px';
-//         });
-//         navList.style.maxHeight = '1';
-//         navList.style.opacity = '1';
-//     } else {
-//         menuItems.forEach(function(item) {
-//             let link = item.querySelector('a');
-//             if (!link) {
-//                 return;
-//             }
-//             link.style.fontSize = baseFontSize + 'px';
-//             link.style.padding = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
-//             item.style.margin = basePaddingTopBottom + 'px ' + basePaddingLeftRight + 'px';
-//         });
-//     }
-// }
-//
-//
-//
-//
-//
-// // Observe changes in the DOM
-// const observer = new MutationObserver(function(mutationsList, observer) {
-//     for (let mutation of mutationsList) {
-//         if (mutation.type === 'childList') {
-//             let navList = document.getElementById('nav-list');
-//             if (navList) {
-//                 checkInitialState()
-//                 console.log("fadsfasdf")
-//                                     observer.disconnect(); // הפסק את ההתבוננות לאחר שהאלמנט נמצא
-//                     break;
-//             }
-//         }
-//     }
-// });
-
-// Start observing the document body for added nodes
-// observer.observe(document.body, { childList: true, subtree: true });
-
-
-// Add event listener for scroll and resize events
 window.addEventListener('scroll',adjustPadding );
-// window.addEventListener('resize', adjustMenu);
-
-function checkInitialState() {
-    // adjustMenu()
-    adjustPadding();
-}
 
 
 function toggleMenu() {
@@ -95,6 +28,22 @@ function toggleMenu() {
         menuIcon.classList.add('open');
     }
 }
+
+// Add an event listener for window resize
+window.addEventListener('resize', function() {
+    const navList = document.getElementById('nav-list');
+    const menuIcon = document.querySelector('.menu-icon');
+    if (window.innerWidth > 768) {
+        navList.style.maxHeight = 'none';
+        navList.style.opacity = '1';
+        navList.classList.remove('active');
+        menuIcon.classList.remove('open');
+    } else {
+        navList.style.maxHeight = '0';
+        navList.style.opacity = '0';
+        menuIcon.classList.remove('open');
+    }
+});
 
 let slideIndex = 1;
 let slideInterval;

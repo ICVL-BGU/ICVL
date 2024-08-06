@@ -5,8 +5,7 @@
     --header-background-color: #1a1a1a;
     --footer-background-color: #1a1a1a;
     --link-color: #ffffff;
-    --hover-background-color: #ff5722;
-    --hover-text-color: #ffffff;
+    --hover-text-color: #fb683f;
     --container-background-color: #f5f5f5;
     --container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     --theme-toggle-text-color: white;
@@ -21,8 +20,7 @@
     --footer-background-color: #333333;
     --link-color: #1e90ff;
     --link-color-grad-senior: #1e90ff;
-    --hover-background-color: #ff3300;
-    --hover-text-color: #ffffff;
+    --hover-text-color: #fb683f;
     --container-background-color: #1e1e1e;
     --theme-toggle-text-color: #1e90ff;
     transition: all 0.5s ease; /* Add transition for theme change */
@@ -44,13 +42,14 @@ header {
     align-items: center;
     justify-content: flex-start;
     transition: all 0.1s ease-out;
+    flex-direction: column;
 }
 
 header.fixed {
     position: fixed;
     top: 0;
-    flex-direction: row;
-    padding: 5px 20px;
+    flex-direction: column;
+    padding: 1px 10px;
 }
 
 header .logo img {
@@ -91,7 +90,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--hover-background-color);
     color: var(--hover-text-color);
     border-radius: 4px;
 }

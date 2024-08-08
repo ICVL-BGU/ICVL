@@ -40,25 +40,43 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Center content horizontally */
     transition: all 0.1s ease-out;
-    flex-direction: column;
+    flex-direction: column; /* Ensure column layout */
 }
 
 header.fixed {
     position: fixed;
     top: 0;
-    flex-direction: column;
     padding: 1px 10px;
 }
 
-header .logo img {
-    width: 120px;
+header .logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Center the content */
+    position: relative; /* Enable absolute positioning for logo */
+}
+
+header .logo {
+    position: absolute; /* Position the logo absolutely */
+    left: 0; /* Align logo to the left */
+    width: 120px; /* Ensure same width for both */
     transition: width 0.1s ease-out;
 }
 
-header.fixed .logo img {
-    width: 60px;
+header.fixed .logo {
+    width: 60px; /* Ensure same width for both when fixed */
+}
+
+header .text {
+    width: 100px; /* Ensure same width for both */
+    transition: width 0.1s ease-out;
+}
+
+header.fixed .text {
+    width: 60px; /* Ensure same width for both when fixed */
 }
 
 nav {

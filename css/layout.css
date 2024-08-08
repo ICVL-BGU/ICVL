@@ -35,7 +35,7 @@ body {
 header {
     background-color: var(--header-background-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 3px 6px;
+    padding: 10px 20px; /* More spacious padding for non-fixed header */
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -48,7 +48,7 @@ header {
 header.fixed {
     position: fixed;
     top: 0;
-    padding: 1px 10px;
+    padding: 1px 6px; /* Minimized padding for fixed header */
 }
 
 header .logo-container {
@@ -60,7 +60,6 @@ header .logo-container {
 }
 
 header .logo {
-    position: absolute; /* Position the logo absolutely */
     left: 0; /* Align logo to the left */
     width: 120px; /* Ensure same width for both */
     transition: width 0.1s ease-out;
@@ -82,7 +81,8 @@ header.fixed .text {
 nav {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul {
@@ -91,13 +91,18 @@ nav ul {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul li {
-    margin: 10px 15px;
+    margin: 15px 20px; /* Spacious margin for non-fixed header */
     display: flex;
     align-items: center;
+}
+
+header.fixed nav ul li {
+    margin: 0 10px; /* Reduced margin for fixed header */
 }
 
 nav ul li a {
@@ -111,6 +116,7 @@ nav ul li a:hover {
     color: var(--hover-text-color);
     border-radius: 4px;
 }
+
 
 /* Theme toggle button */
 .theme-toggle {

@@ -61,16 +61,16 @@ header .logo-container {
 
 header .logo {
     left: 0; /* Align logo to the left */
-    width: 120px; /* Ensure same width for both */
+    width: 140px; /* Ensure same width for both */
     transition: width 0.1s ease-out;
 }
 
 header.fixed .logo {
-    width: 75px; /* Ensure same width for both when fixed */
+    width: 60px; /* Ensure same width for both when fixed */
 }
 
 header .text {
-    width: 113px; /* Ensure same width for both */
+    width: 120px; /* Ensure same width for both */
     transition: width 0.1s ease-out;
 }
 

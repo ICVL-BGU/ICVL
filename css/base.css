@@ -15,8 +15,17 @@ html, body {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    /* Initial state for fade-in effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in; /* Adjust the duration and easing as needed */
+}
+
+/* Fade-in effect */
+body.fade-in {
+    opacity: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {

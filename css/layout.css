@@ -267,7 +267,7 @@ footer p {
 }
 
 .student_box p b, .student_box_alumni p b {
-    color: #555;
+    color: var(--text-color);
 }
 
 /* Additional styles to match theme */

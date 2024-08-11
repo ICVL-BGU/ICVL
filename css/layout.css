@@ -26,12 +26,6 @@
     transition: all 0.5s ease; /* Add transition for theme change */
 }
 
-/* Apply CSS Variables */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
 header {
     background-color: var(--header-background-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -62,7 +56,7 @@ header .logo-container {
 header .logo {
     left: 0; /* Align logo to the left */
     width: 140px; /* Ensure same width for both */
-    transition: width 0.1s ease-out;
+    transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 
 header.fixed .logo {
@@ -71,12 +65,18 @@ header.fixed .logo {
 
 header .text {
     width: 120px; /* Ensure same width for both */
-    transition: width 0.1s ease-out;
+    transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 
 header.fixed .text {
     width: 60px; /* Ensure same width for both when fixed */
 }
+
+/* Added hover effect */
+header .logo:hover, header .text:hover {
+    transform: scale(0.95); /* Shrinks the element slightly */
+}
+
 
 nav {
     display: flex;

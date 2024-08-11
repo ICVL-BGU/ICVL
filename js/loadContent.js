@@ -32,3 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(script);
     });
 });
+
+window.addEventListener('load', function() {
+    document.body.classList.add('fade-in');
+});

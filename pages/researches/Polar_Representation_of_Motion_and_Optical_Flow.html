@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrovision</title>
+    <base href="/ICVL/">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="main-container">
+        <main id="content">
+            <section class="research-section">
+                <h2>Polar Representation of Motion and Optical Flow</h2>
+
+                <p>Classical and contemporary optical flow algorithms aim to estimate image motion fields (a.k.a. optical flows) that emerge from scenes with rigid or articulated objects, i.e., motion fields with roughly piecewise smooth motions, and no turbulences or complicated singularities (and most often, just piecewise constant velocity). However, the variety of motions exhibited by natural or manmade phenomena clearly go beyond this class (see few examples in the images below, one of which are <a href="http://www.cs.bgu.ac.il/~icvl/projects/project-sfsf.html">specular flows</a> that we exploit for specular shape inference in another line of research in the lab). To attempt better motion estimation even in these extreme conditions, we suggest studying complex optical flows in <strong>polar</strong> representation, where each element of the brightness motion field is represented by its magnitude and orientation instead of its Cartesian projections. This seemingly small change in representation provides more direct access to the intrinsic structure of the field and to make readily explicit certain statistical properties not observed in Cartesian representation. When used with the popular variational inference paradigm, it provides a framework in which regularizers can be intuitively tailored for very different classes of motion, including those complex motions that motivate this research from the start.</p>
+
+                <p>Our evaluations reveal that a flow estimation algorithm that is based on a polar representation can perform as well or better than the state-of-the-art when applied to traditional (approximately piecewise constant) optical flow problems. But at the same time, it facilitates both qualitative and quantitative improvements for non-traditional cases such as fluid flows and specular flows, whose structure is very different.</p>
+
+<section class="research-section">
+
+                        <img src="./assets/research/Polar-Representation-of-Motion-and-Optical-Flow/flow3.png" alt="Flow Example 3" width="367" height="156">
+               </section>
+
+                <h2>Download Code</h2>
+                <p>You are welcome to download the <a href="http://www.cs.bgu.ac.il/~icvl/projects/project-polar-files/polarOpticalFlow.zip">polar based optical flow estimation code</a>. Please note that this implementation is using <a href="http://www.cs.brown.edu/~dqsun/">Deqing Sun's optical flow implementation from Sun et al., CVPR 2010.</a></p>
+
+                <h2>Papers</h2>
+                <p><a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Adato_Zickler_and_Ben_Shahar-A_Polar_Representation_of_Motion_and_Implications_for_Optical_Flow.pdf">A polar representation of motion and implications for optical flow</a>, In the <em>Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition (CVPR),</em> Colorado Springs, USA, June, pp. 1145-1152, 2011.</p>
+
+                <h2>Acknowledgments</h2>
+                <p>This research is a joint work by <a href="http://www.cs.bgu.ac.il/~adato">Yair Adato</a> and <a href="http://www.cs.bgu.ac.il/~ben-shahar/">Ohad Ben Shahar</a> of the <a href="http://www.cs.bgu.ac.il/">Computer Science Department</a>, <a href="http://in.bgu.ac.il/en/Pages/default.aspx">Ben-Gurion University of The Negev</a>, and <a href="http://www.eecs.harvard.edu/~zickler/">Todd Zickler</a> of the <a href="http://www.eecs.harvard.edu/">Harvard School of Engineering and Applied Sciences</a>. It was published in the Proceedings of the <a href="http://cvpr2011.org/">IEEE conference on Computer Vision and Pattern Recognition, 2011</a> and also presented in the <a href="http://www.technologies.co.il/beta/Conference.aspx?Id=81">Israel Machine Vision Conference (IMVC) 2012.</a></p>
+                <p>This project was funded in part by the Israel Science Foundation (grant No. 1245/08), the US National Science Foundation (grant IIS-0712956), and the US Air Force European Office of Aerospace Research and Development (grant number FA8655-09-1-3016). Additional funding for Yair Adato was provided by a <a href="http://research.google.com/university/relations/fellowship_recipients.html">Google Europe Fellowship</a> in computer vision.</p>
+            </section>
+        </main>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="/ICVL/js/loadContent.js"></script>
+</body>
+</html>

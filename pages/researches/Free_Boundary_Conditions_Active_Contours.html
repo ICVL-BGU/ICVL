@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrovision</title>
+    <base href="/ICVL/">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="main-container">
+        <main id="content">
+            <section class="research-section">
+                <h2>Free-Boundary-Conditions-Active-Contours</h2>
+
+                <img src="https://www.cs.bgu.ac.il/~icvl/wp-content/uploads/2012/11/projects-index-FBCAC-anim.gif" alt="Free Boundary Conditions Animation" width="260" height="196">
+
+                <p>Welcome to our Free Boundary Conditions Open Active Contours (FBCOAC) project page! Here you may find various demos and download all project-related materials such as the paper, supplementary materials, and the MATLAB code which allows you to experiment with the free boundary conditions active contour model using a convenient GUI. Active contours with free boundary conditions are a type of open contour model, but unlike the few previous attempts to use open active contours, which relied on either <strong><em>no</em></strong> boundary conditions or <strong><em>fixed</em></strong> boundary conditions, here we present a third type whose endpoints are allowed to move freely along given parametric curves – or what’s known in the literature of calculus of variations as <strong><em>free</em></strong> boundary conditions. We believe this type offers some benefits that can be utilized in various computer vision applications, several of which are presented below.</p>
+
+                <p>The animation on the right shows in blue the evolution of such FABCOAC from an initial green state until it converges to a minimal energetic state. Here the energy of the curve is defined solely on its shape, but the scheme allows external energy (one that depends on the image) to be integrated as well. The two (predefined) parametric boundary curves are shown in red.</p>
+
+                <h2>Download-Matlab-Code</h2>
+                <p>The following MATLAB code implements the <strong>parametric</strong> free boundary conditions active contour model, in which the active contour is represented explicitly as a sampled parametric curve (as described in the paper). The initial contour is created by the user and evolves until it reaches an optimal (local minimum) energetic state.</p>
+                <ul>
+                    <li>Download and extract the <a href="http://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/Free_Boundary_Conditions_Active_Countours_GUI.zip">Free boundary conditions active contours GUI</a>. Once you are done, a directory named “Free_Boundary_Conditions_Active_Contours_GUI” will include the relevant MATLAB files.</li>
+                    <li>Launch MATLAB and set the “Current Folder” accordingly.</li>
+                    <li>In the command window type “gui” to start the program.</li>
+                    <li>Instructions can be found under the ‘Help’ button in the toolbar.</li>
+                </ul>
+
+                <h2>Papers</h2>
+                <ul>
+                    <li><a href="http://www.cs.bgu.ac.il/~ben-shahar/Publications/2011-Shemesh_and_Ben_Shahar-Free_Boundary_Conditions_Active_Contours_with_Applications_for_Vision.pdf">ISVC 2011 paper</a>.</li>
+                    <li><a href="http://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/2011-Shemesh_and_Ben_Shahar-Free_Boundary_Conditions_Active_Contours_with_Applications_for_Vision-Supplementary_material.pdf">ISVC 2011 Supplemental material</a>: Shows additional mathematical analyses.</li>
+                </ul>
+
+                <h2>Selected-Demos-and-Applications</h2>
+                <h2>Boundary-Detection</h2>
+                <p>Open active contours with free boundary conditions are excellent for boundary detection when it is clear that the sought-after boundary intersects a given curve in the image plane (either the image boundaries or not). Here you can see two such examples. The red curves indicate boundary curves for the free boundary conditions. The active contour on the right is set to have dominant internal energy also to overcome occlusions.</p>
+
+                <div class="image-group">
+                    <figure>
+                        <img src="https://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/Free_BC-anim.gif" alt="Free BC Animation" width="203" height="280">
+                    </figure>
+                    <figure>
+                        <img src="https://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/Pepper-ainm.gif" alt="Pepper Animation" width="291" height="280">
+                    </figure>
+                </div>
+
+                <h2>Feature-Tracking</h2>
+                <p>Naturally, the same mechanism can be used to track objects whose boundaries are confined within regions of interest or well-defined boundaries. Road tracking, the example shown here, is a classical case where the shoulders should be tracked within a range of interest, and therefore within boundary curves defined by the vertical margins of the image and a (virtual) horizontal curve obtained by the required distance of interest projected back to the image plane. Naturally, the active contours of the previous frame can be used as an initial state for the active contour in the subsequent frame.</p>
+
+                <img src="https://www.cs.bgu.ac.il/~icvl/wp-content/uploads/2012/11/Road_Tracking-anim.gif" alt="Road Tracking Animation" width="320" height="180">
+
+                <h2>Seam-Carving</h2>
+                <p>Open active contours with free boundary conditions can also be utilized for more remote applications like seam carving, with the advantage being more flexible and general than the classical discrete seams. As such, they are able to converge to better optimized and continuous minima, to provide more accurate seam removal for better image retargeting. An example of one such seam is shown here in blue, after it was initialized by a classical discrete seam and then evolved to yet better minima of the seam energy.</p>
+
+                <div class="image-group">
+                    <figure>
+                        <img src="https://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/butterfly.png" alt="Butterfly Seam Carving" width="260" height="335">
+                    </figure>
+                    <figure>
+                        <img src="https://www.cs.bgu.ac.il/~icvl/projects/project-FBCAC-files/butterfly_zoom.png" alt="Butterfly Zoom Seam Carving" width="260" height="334">
+                    </figure>
+                </div>
+
+                <h2>Acknowledgments</h2>
+                <p>This research is a joint work by <a href="http://www.cs.bgu.ac.il/~shemeshm/">Michal Shemesh</a> and <a href="http://www.cs.bgu.ac.il/~obs/">Ohad Ben-Shahar</a> of the <a href="http://www.cs.bgu.ac.il/">Computer Science Department</a>, <a href="http://in.bgu.ac.il/en/Pages/default.aspx">Ben-Gurion University of The Negev</a>, <a href="http://en.wikipedia.org/wiki/Beersheba">Beer Sheva</a>, <a href="http://en.wikipedia.org/wiki/Israel">Israel</a>. It was presented in the <a href="http://www.isvc.net/11/">International Symposium on Visual Computing (ISVC), 2011,</a> and the <a href="http://www.technologies.co.il/beta/Conference.aspx?Id=81">Israel Machine Vision Conference (IMVC) 2012</a>.</p>
+                <p>This work was funded in part by the European Commission in the 7th Framework Programme (CROPS GA no 246252). We also thank the generous support of the Frankel fund, the Paul Ivanier center for Robotics Research and the Zlotowski Center for Neuroscience at Ben-Gurion University.</p>
+            </section>
+        </main>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="/ICVL/js/loadContent.js"></script>
+</body>
+</html>

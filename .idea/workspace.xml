@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding two more researches + css adjustments">
-      <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
+    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding all researches WITHOUT assets yet">
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/1a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/1b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/2a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/2b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/3a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/3b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/4a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/4b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/5a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/5b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/Road_Tracking-anim.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/butterfly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/projects-index-FBCAC-anim.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations/gist.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations/main_root.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/IMG_1394.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/IMG_1401.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/anamorph-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/anamorph-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/mirror-ball-reflection.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/projects-index-sfsf-anim.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/slide11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/Symmetry-And-Pose-Estimation-In-3D-Data/projects-sym-detection.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,22 +58,22 @@
     &quot;assignee&quot;: &quot;alfital2&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alfital2/ICVL.git",
-    "accountId": "02bb1fd8-b732-48d8-97c4-2bd057832774"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alfital2/ICVL.git&quot;,
+    &quot;accountId&quot;: &quot;02bb1fd8-b732-48d8-97c4-2bd057832774&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "alfital2",
-    "repository": "ICVL"
+    &quot;owner&quot;: &quot;alfital2&quot;,
+    &quot;repository&quot;: &quot;ICVL&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -56,9 +85,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Shape_from_Specular_Flow.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.tmp.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "improve__responsiveness.tal",
+    "git-widget-placeholder": "finalizing__researches.tal",
     "last_opened_file_path": "/Users/talalfi/Documents/פרוייקטי תכנות/אתר מעבדה/ICVL/pages/researches",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,19 +105,28 @@
       <recent name="$PROJECT_DIR$/pages/researches" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/research/multi-phase" />
-      <recent name="$PROJECT_DIR$/assets/seminar" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/assets/researches/gifs" />
+      <recent name="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours" />
+      <recent name="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow" />
+      <recent name="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow " />
+      <recent name="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations" />
+      <recent name="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Shape_from_Specular_Flow.html">
+    <configuration name="Shape_from_Specular_Flow.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ICVL/pages/researches/Shape_from_Specular_Flow.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ICVL/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="tmp.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ICVL/tmp.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Shape_from_Specular_Flow.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.tmp.html" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +149,10 @@
       <workItem from="1720338348839" duration="23016000" />
       <workItem from="1720899294935" duration="162000" />
       <workItem from="1720899519069" duration="41789000" />
+      <workItem from="1723366344977" duration="2401000" />
+      <workItem from="1723546479423" duration="3137000" />
+      <workItem from="1723627524723" duration="1676000" />
+      <workItem from="1723638461411" duration="5423000" />
     </task>
     <task id="LOCAL-00001" summary="before major css refactor">
       <option name="closed" value="true" />
@@ -382,19 +426,77 @@
       <option name="project" value="LOCAL" />
       <updated>1721240233824</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="some css adjustments">
+      <option name="closed" value="true" />
+      <created>1723114015406</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1723114015407</updated>
+    </task>
+    <task id="LOCAL-00036" summary="some css adjustments">
+      <option name="closed" value="true" />
+      <created>1723115222646</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1723115222646</updated>
+    </task>
+    <task id="LOCAL-00037" summary="resize header elements">
+      <option name="closed" value="true" />
+      <created>1723115415788</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1723115415788</updated>
+    </task>
+    <task id="LOCAL-00038" summary="color correction">
+      <option name="closed" value="true" />
+      <created>1723366596032</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1723366596033</updated>
+    </task>
+    <task id="LOCAL-00039" summary="type">
+      <option name="closed" value="true" />
+      <created>1723367232422</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1723367232422</updated>
+    </task>
+    <task id="LOCAL-00040" summary="header images now indicate clickability">
+      <option name="closed" value="true" />
+      <created>1723367251779</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1723367251779</updated>
+    </task>
+    <task id="LOCAL-00041" summary="introduce opacity when loading page">
+      <option name="closed" value="true" />
+      <created>1723367762285</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1723367762285</updated>
+    </task>
+    <task id="LOCAL-00042" summary="adding all researches WITHOUT assets yet">
+      <option name="closed" value="true" />
+      <created>1723550186644</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1723550186644</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="before major css refactor" />
-    <MESSAGE value="after refactor + adding members + about" />
-    <MESSAGE value="publications + research" />
-    <MESSAGE value="fix path" />
-    <MESSAGE value="fix path - test" />
-    <MESSAGE value="fix path, no need with '..' before path" />
     <MESSAGE value="removing _config.yml" />
     <MESSAGE value="test" />
     <MESSAGE value="undo test" />
@@ -413,7 +515,14 @@
     <MESSAGE value="code for two researches as POC" />
     <MESSAGE value="adding Square Jigsaw Puzzle Solving" />
     <MESSAGE value="adding two more researches + css adjustments" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding two more researches + css adjustments" />
+    <MESSAGE value="some css adjustments" />
+    <MESSAGE value="resize header elements" />
+    <MESSAGE value="color correction" />
+    <MESSAGE value="type" />
+    <MESSAGE value="header images now indicate clickability" />
+    <MESSAGE value="introduce opacity when loading page" />
+    <MESSAGE value="adding all researches WITHOUT assets yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding all researches WITHOUT assets yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -421,7 +530,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/seminar.html</url>
           <line>7</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

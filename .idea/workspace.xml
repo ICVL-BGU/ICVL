@@ -5,29 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding all researches WITHOUT assets yet">
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/1a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/1b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/2a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/2b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/3a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/3b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/4a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/4b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/5a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency/5b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/Road_Tracking-anim.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/butterfly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours/projects-index-FBCAC-anim.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations/gist.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations/main_root.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/IMG_1394.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/IMG_1401.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/anamorph-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/anamorph-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/mirror-ball-reflection.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/projects-index-sfsf-anim.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow/slide11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/research/Symmetry-And-Pose-Estimation-In-3D-Data/projects-sym-detection.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" afterDir="false" />
@@ -35,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/resources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resources.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seminar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seminar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +69,7 @@
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.tmp.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "finalizing__researches.tal",
+    "git-widget-placeholder": "page__title__fixes.tal",
     "last_opened_file_path": "/Users/talalfi/Documents/פרוייקטי תכנות/אתר מעבדה/ICVL/pages/researches",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

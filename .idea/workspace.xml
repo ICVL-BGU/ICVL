@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding all researches WITHOUT assets yet">
+    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding yaniv's and gur's researches">
+      <change afterPath="$PROJECT_DIR$/assets/research/gifs/Convex-Pratition.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/research/gifs/reserach-repair.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/researches/Repair.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/resources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/seminar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seminar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/research.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/research.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.tmp.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "page__title__fixes.tal",
+    "git-widget-placeholder": "adding__gurs__researches.tal",
     "last_opened_file_path": "/Users/talalfi/Documents/פרוייקטי תכנות/אתר מעבדה/ICVL/pages/researches",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -85,14 +80,14 @@
       <recent name="$PROJECT_DIR$/pages/researches" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/research/gifs" />
+      <recent name="$PROJECT_DIR$/assets/research/Convex-Partition-Jigsaw-Puzzle-Solving" />
+      <recent name="$PROJECT_DIR$/assets/research/Computational-Polygonal-Puzzle-Solving" />
       <recent name="$PROJECT_DIR$/assets/research/Free-Boundary-Conditions-Active-Contours" />
       <recent name="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow" />
-      <recent name="$PROJECT_DIR$/assets/research/Shape-from-Specular-Flow " />
-      <recent name="$PROJECT_DIR$/assets/research/Scene-Gist-Recognition-from-Perceptual-Relations" />
-      <recent name="$PROJECT_DIR$/assets/research/Contextual-Emergence-Of-Object-Saliency" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Shape_from_Specular_Flow.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Shape_from_Specular_Flow.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ICVL/pages/researches/Shape_from_Specular_Flow.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -104,8 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.Shape_from_Specular_Flow.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.Shape_from_Specular_Flow.html" />
         <item itemvalue="JavaScript Debug.tmp.html" />
       </list>
     </recent_temporary>
@@ -133,6 +128,9 @@
       <workItem from="1723546479423" duration="3137000" />
       <workItem from="1723627524723" duration="1676000" />
       <workItem from="1723638461411" duration="5423000" />
+      <workItem from="1724238417708" duration="2095000" />
+      <workItem from="1724269588886" duration="1000" />
+      <workItem from="1724582533477" duration="5330000" />
     </task>
     <task id="LOCAL-00001" summary="before major css refactor">
       <option name="closed" value="true" />
@@ -470,17 +468,45 @@
       <option name="project" value="LOCAL" />
       <updated>1723550186644</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="naming fixes">
+      <option name="closed" value="true" />
+      <created>1723646834717</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1723646834717</updated>
+    </task>
+    <task id="LOCAL-00044" summary="tst upload vid">
+      <option name="closed" value="true" />
+      <created>1723648177649</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1723648177649</updated>
+    </task>
+    <task id="LOCAL-00045" summary="more videos + some fixes">
+      <option name="closed" value="true" />
+      <created>1723648690386</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1723648690386</updated>
+    </task>
+    <task id="LOCAL-00046" summary="adding yaniv's and gur's researches">
+      <option name="closed" value="true" />
+      <created>1724589330024</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1724589330024</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removing _config.yml" />
-    <MESSAGE value="test" />
-    <MESSAGE value="undo test" />
-    <MESSAGE value="test 404 solution" />
     <MESSAGE value="fix publications" />
     <MESSAGE value="remove 404" />
     <MESSAGE value="relative path added" />
@@ -502,7 +528,11 @@
     <MESSAGE value="header images now indicate clickability" />
     <MESSAGE value="introduce opacity when loading page" />
     <MESSAGE value="adding all researches WITHOUT assets yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding all researches WITHOUT assets yet" />
+    <MESSAGE value="naming fixes" />
+    <MESSAGE value="tst upload vid" />
+    <MESSAGE value="more videos + some fixes" />
+    <MESSAGE value="adding yaniv's and gur's researches" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding yaniv's and gur's researches" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -125,16 +125,28 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.theme-toggle img {
+.theme-toggle img{
     width: 24px; /* Adjust size as needed */
     height: 24px; /* Adjust size as needed */
     transition: opacity 0.3s;
 }
 
-header.fixed .theme-toggle img {
+.home-icon{
+    width: 30px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+}
+
+header.fixed .home-icon  {
+    width: 20px; /* Smaller size when header is fixed */
+    height: 20px; /* Smaller size when header is fixed */
+}
+
+header.fixed .theme-icon {
     width: 16px; /* Smaller size when header is fixed */
     height: 16px; /* Smaller size when header is fixed */
 }
+
 
 /* Hamburger Menu Icon */
 .menu-icon {

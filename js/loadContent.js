@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const scripts = [
         'https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js',
         '/ICVL/js/scripts.js',
-        '/ICVL/js/seminar.js',
-        '/ICVL/js/publications.js'
+        '/ICVL/js/seminar.js'
     ];
 
     scripts.forEach(function(src) {
@@ -28,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (src.includes('seminar.js')) {
                 loadSeminars();
             }
+            // }else{
+            //     fetchPublications();
+            // }
         };
         document.body.appendChild(script);
     });

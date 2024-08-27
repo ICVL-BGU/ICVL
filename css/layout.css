@@ -11,6 +11,7 @@
     --theme-toggle-text-color: white;
     --link-color-grad-senior:  #ff5722;
     transition: all 0.5s ease; /* Add transition for theme change */
+    --hover-background-color : #ff5722;
 }
 
 [data-theme="dark"] {
@@ -24,6 +25,8 @@
     --container-background-color: #1e1e1e;
     --theme-toggle-text-color: #1e90ff;
     transition: all 0.5s ease; /* Add transition for theme change */
+        --hover-background-color : #1e90ff;
+
 }
 
 header {

@@ -12,6 +12,7 @@
     --link-color-grad-senior:  #ff5722;
     transition: all 0.5s ease; /* Add transition for theme change */
     --hover-background-color : #ff5722;
+    --footer-icons-color: #007bff;
 }
 
 [data-theme="dark"] {
@@ -26,6 +27,7 @@
     --theme-toggle-text-color: #1e90ff;
     transition: all 0.5s ease; /* Add transition for theme change */
         --hover-background-color : #1e90ff;
+    --footer-icons-color: #fb683f;
 
 }
 
@@ -173,12 +175,14 @@ header.fixed .theme-icon {
 /* Main Container */
 .main-container {
     width: 80%;
+    max-width: 1200px; /* Added max-width for better layout on large screens */
     margin: 20px auto;
     background-color: var(--container-background-color);
     box-shadow: var(--container-box-shadow);
     padding: 20px;
     border-radius: 8px;
 }
+
 
 /* Footer */
 footer {
@@ -192,16 +196,32 @@ footer {
     border-top: 4px solid var(--hover-background-color);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
-
-footer .contact-info, footer .address {
-    width: 45%;
-    margin-bottom: 20px;
+.contact-info, .address {
+    max-width: 45%;
 }
 
-footer p {
-    margin: 5px 0;
+.contact-info p, .address p {
+    margin: 10px 0;
+    font-size: 16px;
 }
 
+.contact-info i, .address i {
+    margin-right: 8px; /* Space between icon and text */
+    color: var(--footer-icons-color);
+}
+
+.contact-info a, .address a {
+    margin-left: 10px; /* Space between label and content */
+    text-decoration: none;
+}
+
+.contact-info p span, .address p span {
+    margin-left: 10px; /* Space between label and content */
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /* Content Sections */
 .content {
     display: block;

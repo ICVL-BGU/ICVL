@@ -173,12 +173,14 @@ header.fixed .theme-icon {
 /* Main Container */
 .main-container {
     width: 80%;
+    max-width: 1200px; /* Added max-width for better layout on large screens */
     margin: 20px auto;
     background-color: var(--container-background-color);
     box-shadow: var(--container-box-shadow);
     padding: 20px;
     border-radius: 8px;
 }
+
 
 /* Footer */
 footer {

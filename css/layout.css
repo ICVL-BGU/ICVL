@@ -192,16 +192,32 @@ footer {
     border-top: 4px solid var(--hover-background-color);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
-
-footer .contact-info, footer .address {
-    width: 45%;
-    margin-bottom: 20px;
+.contact-info, .address {
+    max-width: 45%;
 }
 
-footer p {
-    margin: 5px 0;
+.contact-info p, .address p {
+    margin: 10px 0;
+    font-size: 16px;
 }
 
+.contact-info i, .address i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007bff;
+}
+
+.contact-info a, .address a {
+    margin-left: 10px; /* Space between label and content */
+    text-decoration: none;
+}
+
+.contact-info p span, .address p span {
+    margin-left: 10px; /* Space between label and content */
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /* Content Sections */
 .content {
     display: block;

@@ -94,17 +94,16 @@ function resetAutoSlide() {
 }
 
 
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    console.log(currentTheme);
-    if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    } else {
+function toggleTheme(theme) {
+    if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+    } else if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
     }
 }
+
 
 // Check for saved theme in localStorage
 const savedTheme = localStorage.getItem('theme');
@@ -112,14 +111,6 @@ const savedTheme = localStorage.getItem('theme');
 // If there's a saved theme, use it
 if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
-} else {
-    // Otherwise, use the system preference
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (systemPrefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
 }
 
 

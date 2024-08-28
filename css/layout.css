@@ -73,12 +73,23 @@ header .text {
     transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 
+header .bgu {
+    width: 80px; /* Ensure same width for both */
+    transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
+}
+
+header.fixed .bgu {
+    width: 40px; /* Ensure same width for both */
+    transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
+}
+
+
 header.fixed .text {
     width: 60px; /* Ensure same width for both when fixed */
 }
 
 /* Added hover effect */
-header .logo:hover, header .text:hover {
+header .logo:hover, header .text:hover, header .bgu:hover {
     transform: scale(0.95); /* Shrinks the element slightly */
 }
 

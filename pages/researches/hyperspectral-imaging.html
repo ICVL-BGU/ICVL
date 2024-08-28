@@ -18,14 +18,6 @@
 </section>
 
 <section class="research-section">
-    <h2>BGU ICVL Hyperspectral Database</h2>
-    <p>The interdisciplinary computational vision lab maintains a constantly growing collection of natural hyperspectral images. The database currently contains 201 images at 1392×1300 spatial resolution over 519 spectral bands. Get it <a href="https://icvl.cs.bgu.ac.il/hyperspectral">here.</a></p>
-        <figure>
-            <img src="./assets/research/hyperspectral-imaging/database-300x206.png">
-        </figure>
-</section>
-
-<section class="research-section">
     <h2>Hyperspectral from RGB</h2>
     <img src="./assets/research/hyperspectral-imaging/Cover_Graphic-1024x515.png">
     <p>RGB imaging systems capture a surprising amount of spectral information. By leveraging sparse overcomplete dictionaries, it is possible to recover hyperspectral information from RGB images.</p>
@@ -45,6 +37,38 @@
         <li><a href="https://github.com/icvl/shred" role="link">https://github.com/icvl/shred</a></li>
     </ul>
 </section>
+
+<section class="research-section">
+    <h2>BGU ICVL Hyperspectral Dataset</h2>
+    <p>In order to allow rapid access to the dataset described in “<a href="http://link.springer.com/chapter/10.1007/978-3-319-46478-7_2" role="link">Sparse Recovery of Hyperspectral Signal from Natural RGB Images</a>“, we provide a link to the dataset below.</p>
+    <p>The dataset images were acquired using a Specim PS Kappa DX4 hyperspectral camera and a rotary stage for spatial scanning. At this time it contains 200 images and will continue to grow progressively.</p>
+    <p>Images were collected at 1392×1300 spatial resolution over 519 spectral bands (400-1,000nm at roughly 1.25nm increments). The <strong>.raw</strong>&nbsp;files contain raw out-of-camera data in ENVI format and&nbsp;<strong>.hdr&nbsp;</strong>files contain the headers required to decode them. For your convenience,&nbsp;<strong>.mat</strong> files are provided, downsampled to 31 spectral channels from 400nm to 700nm at 10nm increments.</p>
+    <p>
+        <a href="https://bgu365.sharepoint.com/:f:/s/ICVL/EiSbs3hD6WNBmPNbDLFFjosB0oZVCNJRUCuUWTDGSQj0rQ?e=KtaEjC">BGU ICVL Hyperspectral Dataset</a></p>
+    <p>When used, fully or partially, please cite “Arad and Ben-Shahar, Sparse Recovery of Hyperspectral Signal from Natural RGB Images, in the European Conference on Computer Vision, Amsterdam, The Netherlands, October 11–14, 2016”</p>
+    <pre>@inproceedings{arad_and_ben_shahar_2016_ECCV,
+        title={Sparse Recovery of Hyperspectral Signal from Natural RGB Images},
+        author={Arad, Boaz and Ben-Shahar, Ohad},
+        booktitle={European Conference on Computer Vision},
+        pages={19--34},
+        year={2016},
+        organization={Springer}
+      }</pre>
+    <p>*RGB renderings are for reference only, and do not depict an expected camera response.</p>
+    <figure>
+        <img src="./assets/research/hyperspectral-imaging/database-300x206.png" alt="database-300x206">
+    </figure>
+
+    <!-- Instructions to open the dataset in Tiles view -->
+    <h3>Instructions to Open in Tiles View</h3>
+    <p>To view the dataset in "Tiles" mode on SharePoint:</p>
+    <ol>
+        <li>Click the dataset link above to open it in SharePoint.</li>
+        <li>In the top right corner of the document library, click the view options icon (it may look like a grid or list icon).</li>
+        <li>Select <strong>"Tiles"</strong> from the dropdown menu.</li>
+    </ol>
+</section>
+
 <section class="research-section">
     <h2>Papers</h2>
     <ul>

@@ -45,8 +45,10 @@ function setMemberPages() {
         } else {
             // If the member is not found in memberLinks, link to the referring page
             const referringPage = "/pages/members.html";
-            imgLink.href = referringPage;
-            nameLink.href = referringPage;
+            if (imgLink){
+                imgLink.href = referringPage;
+                nameLink.href = referringPage;
+            }
         }
     }
 }

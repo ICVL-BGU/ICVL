@@ -172,3 +172,35 @@ function toggleVisibility(id) {
     }
 }
 
+
+
+
+//scale images on research pages when clicked
+const images = document.querySelectorAll('.research-section .image-group img');
+const overlay = document.createElement('div'), overlayImg = document.createElement('img');
+overlay.className = 'image-overlay';
+overlay.appendChild(overlayImg);
+document.body.appendChild(overlay);
+
+images.forEach(img => {
+    img.onclick = () => {
+        overlayImg.src = img.src;
+
+        // Calculate the maximum dimensions to fit the screen while maintaining aspect ratio
+        const screenWidth = window.innerWidth * 0.5;  // 90% of the viewport width
+        const screenHeight = window.innerHeight * 0.5; // 90% of the viewport height
+        const imgAspectRatio = img.naturalWidth / img.naturalHeight; // Original image aspect ratio
+
+        if (imgAspectRatio > 1) { // If image is wider than tall
+            overlayImg.style.width = `${Math.min(img.naturalWidth, screenWidth)/2}px`;
+            overlayImg.style.height = 'auto'; // Maintain aspect ratio
+        } else { // If image is taller than wide
+            overlayImg.style.height = `${Math.min(img.naturalHeight, screenHeight)/2}px`;
+            overlayImg.style.width = 'auto'; // Maintain aspect ratio
+        }
+
+        overlay.classList.add('active'); // Show the overlay
+    };
+});
+
+overlay.onclick = () => overlay.classList.remove('active');

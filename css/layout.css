@@ -421,6 +421,50 @@ ul.public li a {
     justify-content: center;
 }
 
+/* Existing styling for images */
+.research-section .image-group img {
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure images fit within the set dimensions without distortion */
+    border: 2px solid #ccc; /* Optional: add a border around images */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better appearance */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    cursor: pointer; /* Indicate the image is clickable */
+}
+
+/* Overlay to display the image in fullscreen */
+.image-overlay {
+    position: fixed; /* Fix to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    display: flex; /* Flexbox to center the image */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it’s on top of other content */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent by default */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* When the overlay is active */
+.image-overlay.active {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+}
+
+/* Scaled-up image inside the overlay */
+.image-overlay img {
+    max-width: 90%; /* Max width to keep some space around */
+    max-height: 90%; /* Max height to keep some space around */
+    border-radius: 10px; /* Match the border radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for popup */
+    transform: scale(2); /* Scale up to 2x size */
+}
+
+
 .research-section .image-group figure {
     flex: 1; /* Allow figures to grow and shrink */
     text-align: center; /* Center align the figcaption text */

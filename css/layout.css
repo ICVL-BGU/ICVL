@@ -31,10 +31,10 @@
 
 }
 
+
 header {
     background-color: var(--header-background-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; /* More spacious padding for non-fixed header */
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -60,7 +60,7 @@ header .logo-container {
 
 header .logo {
     left: 0; /* Align logo to the left */
-    width: 140px; /* Ensure same width for both */
+    width: 120px; /* Ensure same width for both */
     transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 
@@ -69,12 +69,12 @@ header.fixed .logo {
 }
 
 header .text {
-    width: 120px; /* Ensure same width for both */
+    width: 100px; /* Ensure same width for both */
     transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 
 header .bgu {
-    width: 80px; /* Ensure same width for both */
+    width: 70px; /* Ensure same width for both */
     transition: width 0.1s ease-out, transform 0.2s ease-out; /* Added transform for hover effect */
 }
 

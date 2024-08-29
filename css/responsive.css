@@ -12,6 +12,17 @@
         max-height: 10;
         opacity: 1;
     }
+    .theme-toggle img {
+        width: calc(24px - (1620px - 100vw) / 100); /* Slower shrinking */
+        height: calc(24px - (1620px - 100vw) / 100); /* Slower shrinking */
+        transition: width 0.1s ease-out, height 0.1s ease-out, opacity 0.3s; /* Added transition for width and height */
+    }
+
+    .home-icon {
+        width: calc(30px - (1620px - 100vw) / 80); /* Slower shrinking */
+        transition: width 0.1s ease-out; /* Added transition for width */
+    }
+
 }
 
 @media (max-width: 768px) {

@@ -4,41 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="adding yaniv's and gur's researches">
-      <change beforePath="$PROJECT_DIR$/.idea/ICVL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/icvl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="51289473-927d-43d4-bbdd-83e4ab6871c7" name="Changes" comment="Fix path to root V.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/loadContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grad-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grad-projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/members.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/members.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/research.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/research.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Agrovision.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Agrovision.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Archerfish-Vision.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Archerfish-Vision.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Computational-Polygonal-Puzzle-Solving.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Computational-Polygonal-Puzzle-Solving.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Contextual_Emergence_of_Object_Saliency.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Convex_Partition_Jigsaw_Puzzle_Solving.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Convex_Partition_Jigsaw_Puzzle_Solving.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Curve-completion-in-the-tangent-bundle.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Curve-completion-in-the-tangent-bundle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Free_Boundary_Conditions_Active_Contours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Multi-Phase-Relaxation.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Multi-Phase-Relaxation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/OwlCam_Project.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/OwlCam_Project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Perceptual_singularities.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Perceptual_singularities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Polar_Representation_of_Motion_and_Optical_Flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Repair.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Scene_Gist_Recognition_from_Perceptual_Relations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Shape_from_Specular_Flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Specular_Flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Specular_Flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Square-Jigsaw-Puzzle-Solving.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Square-Jigsaw-Puzzle-Solving.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/Symmetry_And_Pose_Estimation_In_3D_Data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/researches/hyperspectral-imaging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/resources.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resources.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/seminar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seminar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/undergrad-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/undergrad-projects.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +24,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="fix-path" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +66,7 @@
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.tmp.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "fix-path-to-root-2",
     "last_opened_file_path": "/Users/talalfi/Documents/פרוייקטי תכנות/אתר מעבדה/ICVL/pages/researches",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -536,14 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724589330024</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Fix path to root V.2">
+      <option name="closed" value="true" />
+      <created>1725046139319</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1725046139319</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix publications" />
     <MESSAGE value="remove 404" />
     <MESSAGE value="relative path added" />
     <MESSAGE value="revert" />
@@ -568,6 +543,7 @@
     <MESSAGE value="tst upload vid" />
     <MESSAGE value="more videos + some fixes" />
     <MESSAGE value="adding yaniv's and gur's researches" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding yaniv's and gur's researches" />
+    <MESSAGE value="Fix path to root V.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix path to root V.2" />
   </component>
 </project>

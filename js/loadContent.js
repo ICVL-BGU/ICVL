@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Load JavaScript files only after header and footer are loaded
             const scripts = [
                 'https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js',
-                '/icvl/js/scripts.js', // Your script that uses DOMContentLoaded
-                '/icvl/js/seminar.js'
+                './js/scripts.js', // Your script that uses DOMContentLoaded
+                './js/seminar.js'
             ];
 
             // Ensure scripts load in order

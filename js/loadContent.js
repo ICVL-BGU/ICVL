@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Load the header
-    fetch('/ICVL/pages/header.html')
+    fetch('./pages/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
             // Load footer only after header is loaded
-            return fetch('/ICVL/pages/footer.html');
+            return fetch('./pages/footer.html');
         })
         .then(response => response.text())
         .then(data => {
@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Load JavaScript files only after header and footer are loaded
             const scripts = [
                 'https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js',
-                '/ICVL/js/scripts.js', // Your script that uses DOMContentLoaded
-                '/ICVL/js/seminar.js'
+                '/icvl/js/scripts.js', // Your script that uses DOMContentLoaded
+                '/icvl/js/seminar.js'
             ];
 
             // Ensure scripts load in order

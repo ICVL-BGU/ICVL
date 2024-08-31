@@ -38,6 +38,7 @@ header {
     width: 100%;
     z-index: 1000;
     display: flex;
+    padding-bottom:10px ;
     align-items: center;
     justify-content: center; /* Center content horizontally */
     transition: all 0.1s ease-out;

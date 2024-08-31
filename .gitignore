@@ -1,0 +1,7 @@
+# Ignore all files in the .idea folder
+.idea/
+
+# Ignore specific files in the .idea folder
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/vcs.xml

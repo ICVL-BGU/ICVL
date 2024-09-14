@@ -659,7 +659,7 @@ ul.public li a {
     font-weight: normal;
 }
 
-.grad-positions a,.senior-projects a{
+.grad-positions a,.senior-projects a, .description a{
     color: var(--link-color-grad-senior);
 }
 

@@ -29,7 +29,10 @@ const memberPages = {
     liana: "https://www.linkedin.com/in/liana-diesendruck-5725b44/",
     hadassa: "https://www.linkedin.com/in/hadassa-daltrophe-0477a383/",
     maor: "https://www.linkedin.com/in/maor-mishkin/",
-    moran: "https://www.linkedin.com/in/moran-hirsh-aba84ab/"
+    moran: "https://www.linkedin.com/in/moran-hirsh-aba84ab/",
+    noa_gur: "https://www.linkedin.com/in/noa-gur-8ab9b033b/",
+    hila_ben_simchone: "https://www.linkedin.com/in/hila-ben-simchone-086a1b317/",
+    roi_lifshitz: "https://www.linkedin.com/in/roi-lifshitz-0ab37a330/"
 };
 
 // Function to set links for each member

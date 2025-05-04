@@ -222,3 +222,66 @@
 .slide.active-slide {
     opacity: 1;
 }
+
+/* Publications */
+#publications .publication-year h2 {
+    cursor: pointer;
+    padding-bottom: 10px;
+    color: #ff6600;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#publications .publication-year h2:hover {
+    color: #ff3300;
+    transform: scale(1.01);
+}
+
+#publications .public {
+    margin-bottom: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#publications .public li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#publications .public li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #1e90ff;
+    border-radius: 50%;
+}
+
+#publications .public li a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+#publications .public li a:hover {
+    text-decoration: underline;
+}
+
+#publications .loading {
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+#publications .error {
+    padding: 20px;
+    text-align: center;
+    color: #cc0000;
+}

@@ -115,12 +115,13 @@ if (savedTheme) {
 
 
 function fetchPublications() {
-    console.log("fetching publications")
+    console.log("Fetching publications...");
     const currentYear = new Date().getFullYear();
     const baseUrl = "https://www.cs.bgu.ac.il/~ben-shahar/Publications/";
     const src = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.cs.bgu.ac.il/~ben-shahar/publicbyy.html");
 
-    console.log('Starting fetch request from: ' + src);
+    // Show loading state
+    document.getElementById("publications").innerHTML = "<div class='loading'>Loading publications...</div>";
 
     fetch(src)
         .then(response => {
@@ -158,9 +159,13 @@ function fetchPublications() {
                     </div>`;
             });
 
-            document.getElementById("publications").innerHTML = htmlContent;
+            document.getElementById("publications").innerHTML = htmlContent || "<div class='error'>No publications found</div>";
         })
-        .catch(error => console.error("Error fetching publications:", error));
+        .catch(error => {
+            console.error("Error fetching publications:", error);
+            document.getElementById("publications").innerHTML = 
+                "<div class='error'>Failed to load publications. Please try again later.</div>";
+        });
 }
 
 function toggleVisibility(id) {

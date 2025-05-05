@@ -27,6 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (scripts[index].includes('seminar.js')) {
                         loadSeminars();
                     }
+                    // Check if we're on the publications page and load publications
+                    if (scripts[index].includes('scripts.js') && window.location.href.includes('publications.html')) {
+                        fetchPublications();
+                    }
                     loadScriptsInOrder(index + 1); // Load next script
                 };
                 document.body.appendChild(script);
